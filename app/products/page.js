@@ -8,7 +8,7 @@ export default function ProductsPage() {
             <section className="flex justify-center mt-5">
 
                 {/* Product Card */}
-                <div className="w-full border p-5 rounded-lg h-96">
+                <div className="w-full border p-5 rounded-lg h-fit">
                     <div className="flex flex-row justify-around space-x-5 h-full">
 
                         {/* images and link div */}
@@ -19,7 +19,7 @@ export default function ProductsPage() {
                                     alt="Vercel Logo"
                                     className=""
                                     width={100}
-                                    height={24}
+                                    height={100}
                                     priority
                                 />
                             </div>
@@ -31,24 +31,31 @@ export default function ProductsPage() {
                         </div>
 
                         {/* header and description div */}
-                        <div className="w-4/6 h-full border">
-                            <div className="p-2">
-                                <header className="text-xl font-bold">Products Name</header>
+                        <div className="w-4/6 h-full">
+                            <div className="h-10">
                             </div>
 
-                            <div className="mt-1 border h-16x">
-                                <p>Apple Cider Vinegar has been used for centuries as a traditional remedy to help support digestion, gut health, and appetite. With Wellfinity Skinny Gummies for adults, you can enjoy apple cider vinegar without the unpleasant taste. This delicious vegan formula is also free of caffeine, stimulants, and added sugars.</p>
-
-                                <p>- Helps to support and maintain a healthy metabolism.*</p>
-                                <p>- Vitamin B12 supports healthy nutrient metabolism*</p>
-                                <p>Wellfinity’ sweet, soft and chewy vegan gummies are made with fruit pectin and premium ingredients for great taste and results! Gelatin free.</p>
-
+                            <div className="p-2 border h-fit">
+                                <header className="text-xl font-bold uppercase">Skinny Gummies</header>
                             </div>
 
-                            <div>
-                                <footer>
-                                    <h3>Awesome Divisions</h3>
-                                </footer>
+                            <div className="h-fit">
+
+
+                                <div className="mt-1 border h-fit p-5">
+                                    <p>Apple Cider Vinegar has been used for centuries as a traditional remedy to help support digestion, gut health, and appetite. With Wellfinity Skinny Gummies for adults, you can enjoy apple cider vinegar without the unpleasant taste. This delicious vegan formula is also free of caffeine, stimulants, and added sugars.</p>
+
+                                    <p>- Helps to support and maintain a healthy metabolism.*</p>
+                                    <p>- Vitamin B12 supports healthy nutrient metabolism*</p>
+                                    <p>Wellfinity’ sweet, soft and chewy vegan gummies are made with fruit pectin and premium ingredients for great taste and results! Gelatin free.</p>
+
+                                </div>
+
+                                <div className="h-fit border">
+                                    <footer>
+                                        <h3 className="italic text-xs">Awesome Divisions</h3>
+                                    </footer>
+                                </div>
                             </div>
                         </div>
 
