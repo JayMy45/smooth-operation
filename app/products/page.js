@@ -10,25 +10,28 @@ export default function ProductsPage() {
                 {/* Product Card */}
                 <div className="w-full border p-5 rounded-lg h-96">
                     <div className="flex flex-row justify-around space-x-5 h-full">
-                        <div className="flex flex-col justify-around w-1/3">
-                            <div className="h-16 ">
+
+                        {/* images and link div */}
+                        <div className="flex flex-col justify-around w-2/6 border">
+                            <div className="h-fit mx-auto">
                                 <Image
-                                    src="/vercel.svg"
+                                    src="/SkinnyGummies.png"
                                     alt="Vercel Logo"
-                                    className="dark:invert"
+                                    className=""
                                     width={100}
                                     height={24}
                                     priority
                                 />
                             </div>
-                            <div className=" w-fit border p-2 rounded-md">
+                            <div className=" w-fit border p-2 rounded-md mx-auto">
                                 <Link href="/products/1">
                                     <h3 className="text-xs">Click here to learn more</h3>
                                 </Link>
                             </div>
                         </div>
 
-                        <div className="w-2/3 h-full">
+                        {/* header and description div */}
+                        <div className="w-4/6 h-full">
                             <div className="p-2">
                                 <h1 className="text-xl font-bold">Products Name</h1>
                             </div>
