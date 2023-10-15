@@ -8,9 +8,9 @@ export default function ProductsPage() {
             <section className="flex justify-center mt-5">
 
                 {/* Product Card */}
-                <div className="w-fit border p-5 rounded-lg">
-                    <div className="flex flex-row space-x-5">
-                        <div className="w-fit">
+                <div className="w-full border p-5 rounded-lg h-96">
+                    <div className="flex flex-row justify-around space-x-5 h-full">
+                        <div className="flex flex-col justify-around w-1/3">
                             <div className="h-16 ">
                                 <Image
                                     src="/vercel.svg"
@@ -21,14 +21,14 @@ export default function ProductsPage() {
                                     priority
                                 />
                             </div>
-                            <div className="border p-2 rounded-md">
+                            <div className=" w-fit border p-2 rounded-md">
                                 <Link href="/products/1">
                                     <h3 className="text-xs">Click here to learn more</h3>
                                 </Link>
                             </div>
                         </div>
 
-                        <div className="w-fit h-full">
+                        <div className="w-2/3 h-full">
                             <div className="p-2">
                                 <h1 className="text-xl font-bold">Products Name</h1>
                             </div>
