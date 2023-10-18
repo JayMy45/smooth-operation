@@ -6,7 +6,7 @@ export default function NavBar() {
         <>
             <nav className="flex flex-row h-32">
                 <div className="flex justify-center items-center w-3/12 ">
-                    <div className="hidden dark:block uppercase">
+                    <div className="hidden dark:block uppercase mt-4">
                         <Image
                             src="/smoothlogo1.png"
                             alt="Smooth Operations Logo"
@@ -37,7 +37,7 @@ export default function NavBar() {
                     </div>
                     <div className="hover:-b">
                         <Link href="https://1800386072.myasealive.com/">
-                            <h2 className="uppercase">products</h2>
+                            <h2 className="uppercase">featured products</h2>
                         </Link>
                     </div>
                 </div>
