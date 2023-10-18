@@ -4,12 +4,21 @@ import Link from "next/link";
 export default function NavBar() {
     return (
         <>
-            <nav className="flex flex-row h-32 ">
+            <nav className="flex flex-row h-32">
                 <div className="flex justify-center items-center w-3/12 ">
-                    <div className="flex justify-center items-center uppercase">
+                    <div className="hidden dark:block uppercase">
                         <Image
                             src="/smoothlogo1.png"
                             alt="Smooth Operations Logo"
+                            width={200}
+                            height={200}
+                        />
+                    </div>
+                    <div className="block dark:hidden uppercase">
+                        <Image
+                            src="/smoothlogo1.png"
+                            alt="Smooth Operations Logo"
+                            className="bg-black"
                             width={200}
                             height={200}
                         />
