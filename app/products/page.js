@@ -73,8 +73,8 @@ export default function ProductsPage() {
                                     src="/ScalpElixir.png"
                                     alt="Vercel Logo"
                                     className=""
-                                    width={75}
-                                    height={75}
+                                    width={100}
+                                    height={100}
                                     priority
                                 />
                             </div>
