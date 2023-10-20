@@ -40,8 +40,10 @@ export default function NavBar() {
                             <h2 className="uppercase">featured products</h2>
                         </Link>
                     </div>
+
                 </div>
                 <div className="w-3/12 ">
+
 
                 </div>
             </nav>
