@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function NavBar() {
+    const [productOpen, setProductOpen] = useState(false);
+
+    const handleToggle = () => {
+        setProductOpen(!navbarOpen);
+    };
+
     return (
         <>
             <nav className="flex flex-row h-32">
