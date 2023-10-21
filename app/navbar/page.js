@@ -60,13 +60,12 @@ export default function NavBar() {
                         </Link>
                     </div>
                     <div className="flex justify-around items-center w-6/12 ">
-                        {/* ... other components ... */}
                         <div className="hover:-b relative" ref={dropdownRef}>
                             <div onClick={handleToggle}>
                                 Featured Products
                             </div>
                             {productOpen && (
-                                <div className="absolute top-full left-0 mt-2 flex flex-col justify-center items-center border w-fit h-fit px-5 bg-gray-100 dark:bg-gray-800 dark:border-gray-600">
+                                <div className="absolute top-full left-0 mt-2 flex flex-col justify-center items-center border w-fit h-fit px-7 py-1 bg-gray-800 dark:bg-transparent dark:border-gray-600">
                                     <div>
                                         Product 1
                                     </div>
