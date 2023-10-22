@@ -1,28 +1,26 @@
 export const ProductList = [
     {
         id: 1,
-        name: "Skinny Gummies",
+        name: "REDOXEnergy",
         image: {
-            src: "/SkinnyGummies.png",
-            alt: "Vercel Logo",
+            src: "/ASEARedox.png",
+            alt: "REDOX Energy Image",
             width: 100,
             height: 100,
             className: "",
             priority: true,
         },
         link: {
-            href: "https://shopgofinity.com/products/skinny-gummies",
+            href: "https://shopgofinity.com/products/scalp-stimulating-elixir",
             text: "Click here to learn more",
         },
         header: {
-            text: "Skinny Gummies",
-            className: "text-xl font-bold uppercase",
+            text: "REDOXEnergy",
+            className: "text-xl font-bold",
         },
-        description: `Apple Cider Vinegar has been used for centuries as a traditional remedy to help support digestion, gut health, and appetite. With Wellfinity Skinny Gummies for adults, you can enjoy apple cider vinegar without the unpleasant taste. This delicious vegan formula is also free of caffeine, stimulants, and added sugars.
-
-- Helps to support and maintain a healthy metabolism.*
-- Vitamin B12 supports healthy nutrient metabolism*
-Wellfinity’ sweet, soft and chewy vegan gummies are made with fruit pectin and premium ingredients for great taste and results! Gelatin free.`,
+        description: `ASEA has developed a unique breakthrough product technology
+that has been scientifically tested and shown to signal the
+activation of genetic pathways or affect genes that:`,
         footer: {
             text: "Awesome Divisions",
             className: "italic text-xs"
@@ -59,29 +57,32 @@ Like all Hairfinity Elite products, this powerful, science-backed formula is cle
     },
     {
         id: 3,
-        name: "REDOXEnergy",
+        name: "Skinny Gummies",
         image: {
-            src: "/ASEARedox.png",
-            alt: "REDOX Energy Image",
+            src: "/SkinnyGummies.png",
+            alt: "Vercel Logo",
             width: 100,
             height: 100,
             className: "",
             priority: true,
         },
         link: {
-            href: "https://shopgofinity.com/products/scalp-stimulating-elixir",
+            href: "https://shopgofinity.com/products/skinny-gummies",
             text: "Click here to learn more",
         },
         header: {
-            text: "REDOXEnergy",
-            className: "text-xl font-bold",
+            text: "Skinny Gummies",
+            className: "text-xl font-bold uppercase",
         },
-        description: `ASEA has developed a unique breakthrough product technology
-that has been scientifically tested and shown to signal the
-activation of genetic pathways or affect genes that:`,
+        description: `Apple Cider Vinegar has been used for centuries as a traditional remedy to help support digestion, gut health, and appetite. With Wellfinity Skinny Gummies for adults, you can enjoy apple cider vinegar without the unpleasant taste. This delicious vegan formula is also free of caffeine, stimulants, and added sugars.
+
+- Helps to support and maintain a healthy metabolism.*
+- Vitamin B12 supports healthy nutrient metabolism*
+Wellfinity’ sweet, soft and chewy vegan gummies are made with fruit pectin and premium ingredients for great taste and results! Gelatin free.`,
         footer: {
             text: "Awesome Divisions",
             className: "italic text-xs"
         }
-    }
+    },
+
 ];
