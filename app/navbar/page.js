@@ -30,17 +30,10 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className="flex flex-row h-32">
+            <nav className="flex flex-row h-32 bg-black text-white h-fit">
                 <div className="flex justify-center items-center w-3/12 ">
-                    <div className="hidden dark:block uppercase mt-4">
-                        <Image
-                            src="/smoothlogo1.png"
-                            alt="Smooth Operations Logo"
-                            width={200}
-                            height={200}
-                        />
-                    </div>
-                    <div className="block dark:hidden uppercase">
+
+                    <div className="uppercase">
                         <Image
                             src="/smoothlogo1.png"
                             alt="Smooth Operations Logo"
@@ -79,7 +72,7 @@ export default function NavBar() {
                         </div>
                         {productOpen && (
                             <div
-                                className="absolute w-full transition ease-in duration-1000 bg-white dark:bg-gray-800 dark:text-white p-1 z-10 rounded-b-lg border-t"
+                                className="absolute w-full transition ease-in duration-1000 bg-white dark:bg-gray-800 dark:text-white text-gray-800 p-1 z-10 rounded-b-lg border-t"
                                 style={{ top: productOpen ? '100%' : '0%', transitionProperty: 'top' }}
                             >
                                 {
