@@ -131,7 +131,7 @@ export default function ProductsPage() {
                                 />
                             </div>
                             <div className=" w-fit p-2 rounded-md mx-auto">
-                                <Link href="https://shopgofinity.com/products/scalp-stimulating-elixir">
+                                <Link href="https://shop.aseaglobal.com/products/4313?sponsorId=18003HF07B&m=7&st=ps">
                                     <h3 className="text-xs">Click here to learn more</h3>
                                 </Link>
                             </div>
@@ -183,7 +183,7 @@ export default function ProductsPage() {
                                 />
                             </div>
                             <div className=" w-fit p-2 rounded-md mx-auto">
-                                <Link href="https://shopgofinity.com/products/scalp-stimulating-elixir">
+                                <Link href="https://1800386072.myasealive.com/">
                                     <h3 className="text-xs">Click here to learn more</h3>
                                 </Link>
                             </div>
@@ -195,7 +195,7 @@ export default function ProductsPage() {
                             </div>
 
                             <div className="p-2 h-fit">
-                                <header className="text-xl font-bold">REDOXEnergy</header>
+                                <header className="text-xl font-bold">ASEA Redox</header>
                             </div>
 
                             <div className="h-fit">
