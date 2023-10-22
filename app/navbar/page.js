@@ -55,29 +55,30 @@ export default function NavBar() {
                         </Link>
                     </div>
                     <div className="hover:text-indigo-400 relative" ref={dropdownRef}>
-                        <div onClick={handleToggle} className="flex justify-between items-center">
+                        <div onClick={handleToggle} className="flex justify-between items-center cursor-pointer">
                             {productOpen
                                 ? <>
-                                    <h2 className="uppercase">Featured Products</h2>
-                                    <div className="ml-2">
-                                        <BiSolidUpArrow />
-                                    </div></>
-                                : <>
-                                    <h2 className="uppercase">Featured Products</h2>
-                                    <div className="ml-2">
-                                        <BiSolidDownArrow />
+                                    <div className="">
+                                        <h2 className="uppercase">Featured Products</h2>
                                     </div>
+                                    <BiSolidUpArrow className="ml-2" />
+                                </>
+                                : <>
+                                    <div className="">
+                                        <h2 className="uppercase">Featured Products</h2>
+                                    </div>
+                                    <BiSolidDownArrow className="ml-2" />
                                 </>
                             }
                         </div>
                         {productOpen && (
                             <div
-                                className="absolute w-full transition ease-in duration-1000 bg-white dark:bg-gray-800 dark:text-white text-gray-800 p-1 z-10 rounded-b-lg border-t"
-                                style={{ top: productOpen ? '100%' : '0%', transitionProperty: 'top' }}
+                                className="absolute w-full transition-top ease-in duration-1000 bg-white dark:bg-gray-800 dark:text-white text-gray-800 p-1 z-10 rounded-b-lg border-t"
+                                style={{ top: productOpen ? '100%' : '0%' }}
                             >
                                 {
                                     ProductList.map(({ id, name, link }) => (
-                                        <div key={id} className="text-left ml-3 w-full p-1">
+                                        <div key={id} className="text-left ml-3 w-full p-1 hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
                                             <Link href={link.href}>
                                                 <h2 className="">{name}</h2>
                                             </Link>
@@ -85,6 +86,7 @@ export default function NavBar() {
                                     ))
                                 }
                             </div>
+
                         )}
                     </div>
 
