@@ -3,6 +3,14 @@ import Link from "next/link";
 import { ProductList } from "../data/ProductList";
 
 export default function ProductsPage() {
+
+    // will use this function to separate the description into section depending on the <br /> tag
+    function renderDescription(description) {
+        return description.split('<br /><br />').map((text, index) => (
+            <p key={index}>{text}</p>
+        ));
+    }
+
     return (
         <>
             {/* Product Section */}
@@ -40,19 +48,12 @@ export default function ProductsPage() {
                                     </div>
 
                                     <div className="p-2 h-fit">
-                                        <header className="text-xl font-bold uppercase">{name}</header>
+                                        <header className="text-xl font-bold">{name}</header>
                                     </div>
 
                                     <div className="h-fit">
-
-
-                                        <div className="mt-1 h-fit p-5">
-                                            <p>Apple Cider Vinegar has been used for centuries as a traditional remedy to help support digestion, gut health, and appetite. With Wellfinity Skinny Gummies for adults, you can enjoy apple cider vinegar without the unpleasant taste. This delicious vegan formula is also free of caffeine, stimulants, and added sugars.</p>
-
-                                            <p>- Helps to support and maintain a healthy metabolism.*</p>
-                                            <p>- Vitamin B12 supports healthy nutrient metabolism*</p>
-                                            <p>Wellfinity’ sweet, soft and chewy vegan gummies are made with fruit pectin and premium ingredients for great taste and results! Gelatin free.</p>
-
+                                        <div className="h-fit p-5">
+                                            <div>{renderDescription(description)}</div>
                                         </div>
 
                                         <div className="h-fit">
