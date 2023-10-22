@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { ProductList } from "../data/ProductList";
 
 export default function NavBar() {
     const [productOpen, setProductOpen] = useState(false);
@@ -61,26 +62,21 @@ export default function NavBar() {
                     </div>
                     <div className="flex justify-around items-center w-fit ">
                         <div className="hover:-b relative" ref={dropdownRef}>
-                            <div onClick={handleToggle}>
+                            <div onClick={handleToggle} className="hover:border-b">
                                 Featured Products
                             </div>
                             {productOpen && (
-                                <div className="absolute top-full left-0 mt-2 flex flex-col justify-center items-center border w-fit h-fit px-7 py-1 bg-gray-800 dark:bg-slate-500 dark:border-gray-600">
-                                    <div>
-                                        <Link href="http://www.jeremynmyers.com">
-                                            Product 1
-                                        </Link>
-                                    </div>
-                                    <div>
-                                        <Link href="http://www.jeremynmyers.com">
-                                            Product 2
-                                        </Link>
-                                    </div>
-                                    <div>
-                                        <Link href="http://www.jeremynmyers.com">
-                                            Product 3
-                                        </Link>
-                                    </div>
+                                <div className="absolute top-full left-0 mt-2 flex flex-col justify-center items-center border w-fit h-fit p-2 bg-gray-800 dark:bg-inherent dark:border-gray-600 text-left">
+
+                                    {
+                                        ProductList.map(({ id, name, link }) => (
+                                            <div key={id} className="text-left w-full">
+                                                <Link href={link.href}>
+                                                    <h2 className="">{name}</h2>
+                                                </Link>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
                             )}
                         </div>

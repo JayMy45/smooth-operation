@@ -7,7 +7,7 @@ export default function ProductsPage() {
             {/* Product Section */}
             <section className="flex flex-col justify-center">
 
-                {/* Product Card */}
+                {/* Product Card1 */}
                 <div className="w-full p-10 h-fit bg-gradient-to-r from-indigo-900">
                     <div className="flex flex-row justify-around space-x-5 h-full">
 
@@ -166,7 +166,7 @@ export default function ProductsPage() {
                     </div>
                 </div>
 
-                {/* Product Card3 */}
+                {/* Product Card4 */}
                 <div className="w-full px-5 py-16 h-fit bg-gradient-to-r from-indigo-900">
                     <div className="flex flex-row justify-around space-x-5 h-full">
 
