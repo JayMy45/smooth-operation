@@ -73,12 +73,11 @@ export default function NavBar() {
                         </div>
                         {productOpen && (
                             <div
-                                className="absolute w-full transition-top ease-in duration-1000 bg-white dark:bg-gray-800 dark:text-white text-gray-800 p-1 z-10 rounded-b-lg border-t"
-                                style={{ top: productOpen ? '100%' : '0%' }}
+                                className="absolute w-full bg-white dark:bg-gray-800 dark:text-white text-gray-800 p-1 z-10 rounded-b-lg border-t"
                             >
                                 {
                                     ProductList.map(({ id, name, link }) => (
-                                        <div key={id} className="text-left ml-3 w-full p-1 hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
+                                        <div key={id} className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
                                             <Link href={link.href}>
                                                 <h2 className="">{name}</h2>
                                             </Link>
