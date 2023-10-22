@@ -12,7 +12,7 @@ export default function ProductsPage() {
                 <div className="grid grid-cols w-full p-10 h-fit bg-gradient-to-r from-indigo-900">
                     {
                         ProductList.map(({ id, name, image, alt, link, description }) => (
-                            <div key={id} className="flex flex-row justify-around space-x-5 h-full py-5 mt-4">
+                            <div key={id} className="flex flex-row justify-around space-x-5 h-full py-5 mb-4">
 
                                 {/* images and link div */}
                                 <div className="flex flex-col justify-around w-2/6">
@@ -21,6 +21,7 @@ export default function ProductsPage() {
                                             src={image}
                                             alt={alt}
                                             className=""
+                                            // all images are 450 X 500 png files!!!
                                             width={200}
                                             height={200}
                                             priority
