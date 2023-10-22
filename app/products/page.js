@@ -3,16 +3,24 @@ import Link from "next/link";
 import { ProductList } from "../data/ProductList";
 
 export default function ProductsPage() {
+
+    // will use this function to separate the description into section depending on the <br /> tag
+    function renderDescription(description) {
+        return description.split('<br /><br />').map((text, index) => (
+            <p key={index}>{text}</p>
+        ));
+    }
+
     return (
         <>
             {/* Product Section */}
             <section className="flex flex-col justify-center">
 
                 {/* Product Card1 */}
-                <div className="w-full p-10 h-fit bg-gradient-to-r from-indigo-900">
+                <div className="grid grid-cols w-full p-10 h-fit bg-gradient-to-r from-indigo-900">
                     {
                         ProductList.map(({ id, name, image, alt, link, description }) => (
-                            <div key={id} className="flex flex-row justify-around space-x-5 h-full">
+                            <div key={id} className="flex flex-row justify-around space-x-5 h-full py-5 mb-4">
 
                                 {/* images and link div */}
                                 <div className="flex flex-col justify-around w-2/6">
@@ -21,8 +29,9 @@ export default function ProductsPage() {
                                             src={image}
                                             alt={alt}
                                             className=""
-                                            width={100}
-                                            height={100}
+                                            // all images are 450 X 500 png files!!!
+                                            width={200}
+                                            height={200}
                                             priority
                                         />
                                     </div>
@@ -39,19 +48,12 @@ export default function ProductsPage() {
                                     </div>
 
                                     <div className="p-2 h-fit">
-                                        <header className="text-xl font-bold uppercase">{name}</header>
+                                        <header className="text-xl font-bold">{name}</header>
                                     </div>
 
                                     <div className="h-fit">
-
-
-                                        <div className="mt-1 h-fit p-5">
-                                            <p>Apple Cider Vinegar has been used for centuries as a traditional remedy to help support digestion, gut health, and appetite. With Wellfinity Skinny Gummies for adults, you can enjoy apple cider vinegar without the unpleasant taste. This delicious vegan formula is also free of caffeine, stimulants, and added sugars.</p>
-
-                                            <p>- Helps to support and maintain a healthy metabolism.*</p>
-                                            <p>- Vitamin B12 supports healthy nutrient metabolism*</p>
-                                            <p>Wellfinity’ sweet, soft and chewy vegan gummies are made with fruit pectin and premium ingredients for great taste and results! Gelatin free.</p>
-
+                                        <div className="h-fit p-5">
+                                            <div>{renderDescription(description)}</div>
                                         </div>
 
                                         <div className="h-fit">
