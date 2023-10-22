@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ProductList } from "../data/ProductList";
+import { BiSolidDownArrow, BiSolidUpArrow } from 'react-icons/bi'
 
 export default function NavBar() {
     const [productOpen, setProductOpen] = useState(false);
@@ -29,17 +30,10 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className="flex flex-row h-32">
+            <nav className="flex flex-row h-32 bg-black text-white h-fit">
                 <div className="flex justify-center items-center w-3/12 ">
-                    <div className="hidden dark:block uppercase mt-4">
-                        <Image
-                            src="/smoothlogo1.png"
-                            alt="Smooth Operations Logo"
-                            width={200}
-                            height={200}
-                        />
-                    </div>
-                    <div className="block dark:hidden uppercase">
+
+                    <div className="uppercase">
                         <Image
                             src="/smoothlogo1.png"
                             alt="Smooth Operations Logo"
@@ -60,27 +54,41 @@ export default function NavBar() {
                             <h2 className="uppercase">asea</h2>
                         </Link>
                     </div>
-                    <div className="flex justify-around items-center w-fit ">
-                        <div className="hover:-b relative" ref={dropdownRef}>
-                            <div onClick={handleToggle} className="hover:border-b">
-                                Featured Products
-                            </div>
-                            {productOpen && (
-                                <div className="absolute top-full left-0 mt-2 flex flex-col justify-center items-center border w-fit h-fit p-2 bg-gray-800 dark:bg-inherent dark:border-gray-600 text-left">
-
-                                    {
-                                        ProductList.map(({ id, name, link }) => (
-                                            <div key={id} className="text-left w-full">
-                                                <Link href={link.href}>
-                                                    <h2 className="">{name}</h2>
-                                                </Link>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            )}
+                    <div className="hover:text-indigo-400 relative" ref={dropdownRef}>
+                        <div onClick={handleToggle} className="flex justify-between items-center cursor-pointer">
+                            {productOpen
+                                ? <>
+                                    <div className="">
+                                        <h2 className="uppercase">Featured Products</h2>
+                                    </div>
+                                    <BiSolidUpArrow className="ml-2" />
+                                </>
+                                : <>
+                                    <div className="">
+                                        <h2 className="uppercase">Featured Products</h2>
+                                    </div>
+                                    <BiSolidDownArrow className="ml-2" />
+                                </>
+                            }
                         </div>
+                        {productOpen && (
+                            <div
+                                className="absolute w-full bg-white dark:bg-gray-800 dark:text-white text-gray-800 p-1 z-10 rounded-b-lg border-t"
+                            >
+                                {
+                                    ProductList.map(({ id, name, link }) => (
+                                        <div key={id} className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
+                                            <Link href={link}>
+                                                <h2 className="">{name}</h2>
+                                            </Link>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+
+                        )}
                     </div>
+
 
                 </div>
                 <div className="w-3/12 ">
