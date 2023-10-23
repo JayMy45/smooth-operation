@@ -40,14 +40,22 @@ export default function Product({ params }) {
                             </Link>
                         </div>
                     </div>
-                    <div className="w-7/12 p-10">
+                    <div className="w-7/12 p-8">
+
                         {/* Details Header and more information buttons */}
-                        <div className="h-1/2 border">
-                            <h2>Details Homie</h2>
+                        <div className="h-1/2 border flex flex-col justify-between">
+                            <div className="border">
+                                <header className="text-4xl">Details</header>
+                            </div>
+                            <div className="flex border justify-around p-5">
+                                <button className="bg-gray-700 rounded-lg px-5 py-2">More </button>
+                                <button className="bg-gray-700 rounded-lg px-5 py-2"> Information</button>
+                                <button className="bg-gray-700 rounded-lg px-5 py-2"> data</button>
+                            </div>
                         </div>
 
                         {/* Detailed Description */}
-                        <div className="h-fit border p-2">
+                        <div className="h-fit border p-3">
                             {
                                 <h2 className="text-sm">{renderDescription(product.description)}</h2>
                             }
