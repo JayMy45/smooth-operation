@@ -17,7 +17,7 @@ export default function Product({ params }) {
         <>
             <section className="flex justify-center items-center h-[70vh]">
 
-                <div className="flex border dark:border-black h-[35rem] w-[50rem] rounded-xl overflow-hidden bg-gray-600 shadow-xl">
+                <div className="flex border dark:border-black h-[35rem] w-[50rem] rounded-xl overflow-hidden bg-gray-300 dark:bg-gray-600 shadow-xl">
                     <div className="flex flex-col text-center w-5/12 px-2 pb-10">
 
                         <div className="flex justify-center items-center h-5/6">

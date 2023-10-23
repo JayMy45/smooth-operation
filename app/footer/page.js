@@ -5,9 +5,9 @@ export default function Footer() {
 
     return (
         <>
-            <footer className="flex justify-between items-center h-36 w-full border px-7">
+            <footer className="flex justify-between items-center h-36 w-full border px-7 bg-black">
                 <div className="flex justify-center items-center w-3/12  border">
-                    <div className="hidden dark:block uppercase">
+                    <div className="uppercase">
                         <Image
                             src="/smoothlogo2.png"
                             alt="Smooth Operations Logo"
@@ -25,13 +25,15 @@ export default function Footer() {
                 </div>
 
             </footer>
-            <div className="flex flex-row justify-center md:justify-end py-2 md:py-0">
+            <div className="flex flex-row justify-center md:justify-end py-2 md:py-0 bg-black">
                 <div className="md:flex md:justify-center md:items-center md:p-0">
                     <a href="http://www.jeremynmyers.com">
-                        <h4 className="text-xxs text-zinc-6000 dark:text-zinc-50 px-2">&copy; 2023 JayMyDesign<span className="text-yellow-500">*</span></h4>
+                        <h4 className="text-xxs text-zinc-50 px-2">&copy; 2023 JayMyDesign<span className="text-yellow-500">*</span></h4>
                     </a>
                 </div>
+
                 <HoustonBrand />
+
             </div>
         </>
     )
