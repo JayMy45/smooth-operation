@@ -6,6 +6,13 @@ export default function Product({ params }) {
     const { id } = params;
     const product = ProductList.find((product) => product.id === Number(id));
 
+    // will use this function to separate the description into section depending on the <br /> tag
+    function renderDescription(description) {
+        return description.split('<br /><br />').map((text, index) => (
+            <p key={index}>{text}</p>
+        ));
+    }
+
     return (
         <>
             <section className="flex justify-center items-center h-[70vh]">
@@ -34,11 +41,16 @@ export default function Product({ params }) {
                         </div>
                     </div>
                     <div className="w-7/12 p-10">
+                        {/* Details Header and more information buttons */}
                         <div className="h-1/2 border">
                             <h2>Details Homie</h2>
                         </div>
-                        <div className="h-1/2 border">
-                            <h2>Details Homie</h2>
+
+                        {/* Detailed Description */}
+                        <div className="h-fit border p-2">
+                            {
+                                <h2 className="text-sm">{renderDescription(product.description)}</h2>
+                            }
                         </div>
                     </div>
                 </div>
