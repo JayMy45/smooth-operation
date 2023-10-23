@@ -36,7 +36,7 @@ export default function ProductsPage() {
                                         />
                                     </div>
                                     <div className=" w-fit p-2 rounded-md mx-auto">
-                                        <Link href={link}>
+                                        <Link href={`/products/${id}`}>
                                             <h3 className="text-xs">Click here to learn more</h3>
                                         </Link>
                                     </div>
