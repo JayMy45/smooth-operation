@@ -75,10 +75,19 @@ export default function NavBar() {
                             <div
                                 className="absolute w-full bg-white dark:bg-gray-800 dark:text-white text-gray-800 p-1 z-10 rounded-b-lg border-t"
                             >
+                                <div className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
+                                    <Link href={`/`}
+                                        onClick={handleToggle}
+                                    >
+                                        <h2 className="font-bold">All Products</h2>
+                                    </Link>
+                                </div>
                                 {
                                     ProductList.map(({ id, name, link }) => (
                                         <div key={id} className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
-                                            <Link href={link}>
+                                            <Link href={`/products/${id}`}
+                                                onClick={handleToggle}
+                                            >
                                                 <h2 className="">{name}</h2>
                                             </Link>
                                         </div>
