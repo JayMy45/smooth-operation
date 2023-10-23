@@ -19,7 +19,7 @@ export default function ProductsPage() {
                 {/* Product Card1 */}
                 <div className="grid grid-cols w-full p-10 h-fit bg-gradient-to-r from-indigo-900">
                     {
-                        ProductList.map(({ id, name, image, alt, link, description }) => (
+                        ProductList.map(({ id, name, image, alt, description, company }) => (
                             <div key={id} className="flex flex-row justify-around space-x-5 h-full py-5 mb-4">
 
                                 {/* images and link div */}
@@ -58,7 +58,7 @@ export default function ProductsPage() {
 
                                         <div className="h-fit">
                                             <footer>
-                                                <h3 className="italic text-xs">Awesome Divisions</h3>
+                                                <h3 className="text-xxs">{company}</h3>
                                             </footer>
                                         </div>
                                     </div>

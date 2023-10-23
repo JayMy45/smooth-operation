@@ -48,9 +48,15 @@ export default function Product({ params }) {
                                 <header className="text-4xl">Details</header>
                             </div>
                             <div className="flex border justify-around p-5">
-                                <button className="bg-gray-700 rounded-lg px-5 py-2">More </button>
-                                <button className="bg-gray-700 rounded-lg px-5 py-2"> Information</button>
-                                <button className="bg-gray-700 rounded-lg px-5 py-2"> data</button>
+                                {product.video && product.pdf
+                                    ? <>
+                                        <button className="bg-gray-700 rounded-lg px-5 py-2">Video</button>
+                                        <button className="bg-gray-700 rounded-lg px-5 py-2">Downloads</button>
+                                    </>
+                                    : product.video && !product.pdf
+                                        ? <button className="bg-gray-700 rounded-lg px-5 py-2">Video</button>
+                                        : null
+                                }
                             </div>
                         </div>
 
