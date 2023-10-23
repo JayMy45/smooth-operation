@@ -5,8 +5,8 @@ export default function Footer() {
 
     return (
         <>
-            <footer className="flex justify-between items-center h-36 w-full border px-7 bg-black">
-                <div className="flex justify-center items-center w-3/12  border">
+            <footer className="flex justify-between items-center h-36 w-full px-7 bg-black">
+                <div className="flex justify-center items-center w-3/12">
                     <div className="uppercase">
                         <Image
                             src="/smoothlogo2.png"
