@@ -30,7 +30,7 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className="flex flex-row h-32 bg-black text-white h-fit">
+            <nav className="relative top-0 flex flex-row h-32 bg-black text-white h-fit sticky z-10">
                 <div className="flex justify-center items-center w-3/12 ">
 
                     <div className="uppercase">
