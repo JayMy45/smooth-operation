@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ProductList } from "../data/ProductList";
 import { BiSolidDownArrow, BiSolidUpArrow } from 'react-icons/bi'
+import Hamburger from "../hamburger";
 
 export default function NavBar() {
     const [productOpen, setProductOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className="relative top-0 flex flex-row h-32 bg-black text-white h-fit sticky z-10">
+            <nav className="hidden md:block relative top-0 flex flex-row h-32 bg-black text-white h-fit sticky z-10">
                 <div className="flex justify-center items-center w-3/12 ">
 
                     <div className="uppercase">
@@ -105,6 +106,11 @@ export default function NavBar() {
 
                 </div>
             </nav>
+
+            {/* hamburger menu */}
+            <div className="flex border-b border-gray-400 dark:border-gray-950 md:border-none">
+                <Hamburger />
+            </div>
         </>
     );
 }
