@@ -15,9 +15,9 @@ export default function Product({ params }) {
 
     return (
         <>
-            <section className="flex justify-center items-center h-[75vh] md:h-[70vh]">
+            <section className="flex justify-center items-center lg:h-[75vh] md:h-[70vh]">
 
-                <div className="flex border dark:border-black h-[35rem] w-[50rem] rounded-xl overflow-hidden bg-gray-300 dark:bg-gray-600 shadow-xl">
+                <div className="flex border dark:border-white  md:h-[30rem] md:w-[50rem] rounded-xl overflow-hidden bg-gray-300 dark:bg-gray-600 shadow-xl">
                     <div className="flex flex-col text-center w-5/12 px-2 pb-10">
 
                         <div className="flex justify-center items-center h-5/6">
@@ -66,9 +66,11 @@ export default function Product({ params }) {
                                     : null
                             }
                         </div>
-                        <div className="absolute bottom-0 right-0 border border-gray-400 rounded-br-xl p-3 mr-2 mb-2">
+                        <div className="absolute bottom-0 right-0 border border-gray-400 rounded-br-xl p-2 mr-2 mb-2 shadow-2xl">
                             <div className="">
-                                <Link href={`/`}>Back to All Products</Link>
+                                <Link href={`/`}>
+                                    <h3 className="text-sm">Back to All Products</h3>
+                                </Link>
                             </div>
                         </div>
                     </div>
