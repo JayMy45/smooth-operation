@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BiSolidDownArrow, BiSolidUpArrow } from 'react-icons/bi'
 import { ProductList } from "./data/ProductList";
+import Image from "next/image";
 
 
 export default function Hamburger() {
@@ -16,8 +17,6 @@ export default function Hamburger() {
     const handleToggle = () => {
         setNavbarOpen(!navbarOpen);
     }
-
-
 
     useEffect(() => {
         const handleResize = () => {
@@ -116,7 +115,7 @@ export default function Hamburger() {
                                 >
                                     <div className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
                                         <Link href={`/`}
-                                            onClick={toggleProduct}
+                                            onClick={() => setNavbarOpen(false)}
                                         >
                                             <h2 className="font-bold">All Products</h2>
                                         </Link>
@@ -125,7 +124,7 @@ export default function Hamburger() {
                                         ProductList.map(({ id, name, link }) => (
                                             <div key={id} className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
                                                 <Link href={`/products/${id}`}
-                                                    onClick={toggleProduct}
+                                                    onClick={() => setNavbarOpen(false)}
                                                 >
                                                     <h2 className="">{name}</h2>
                                                 </Link>
@@ -138,32 +137,15 @@ export default function Hamburger() {
                         </div>
                     </ul>
                 </div>
-                <div>
+                <div className="absolute bottom-0">
                     <div className="flex flex-row justify-around pt-10 items-center">
-
-                        {/* facebook link */}
-                        <Link href={"https://www.facebook.com/profile.php?id=100092835397018&mibextid=LQQJ4d"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img className="bg-white rounded-lg w-7 h-7" src="https://res.cloudinary.com/dp04hh5pz/image/upload/v1690513224/RewriteTheNarrative/Icon_Images_wwcmz7.png" alt="Facebook Logo" title="Facebook" />
-                        </Link>
-
-                        {/* instagram link */}
-                        <Link href={"https://www.instagram.com/oledasinkler_/?igshid=MmIzYWVlNDQ5Yg%3D%3D"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img className="bg-gray-200 rounded-lg w-7 h-7" src="https://res.cloudinary.com/dp04hh5pz/image/upload/v1690513678/RewriteTheNarrative/Icon_Images_2_jdxlrj.png" alt="Instagram Logo" title="Instagram" />
-                        </Link>
-
-                        {/* clubhouse link */}
-                        <Link href={"https://www.clubhouse.com/house/rewrite-the-narrative"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img className="bg-gray-200 rounded-lg w-7 h-7" src="https://res.cloudinary.com/dp04hh5pz/image/upload/v1690572546/RewriteTheNarrative/clubhouseIcon_hdkraj.png" alt="Clubhouse.com Logo" title="Clubhouse" />
-                        </Link>
+                        <Image
+                            src="/smoothlogo2.png"
+                            alt="Smooth Operations Logo"
+                            className="w-fit"
+                            width={200}
+                            height={200}
+                        />
                     </div>
                 </div>
             </div>
