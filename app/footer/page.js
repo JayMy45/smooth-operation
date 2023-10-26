@@ -1,5 +1,7 @@
 import Image from "next/image";
 import HoustonBrand from "../houston";
+import { ProductList } from "../data/ProductList";
+import Link from "next/link";
 
 export default function Footer() {
 
@@ -17,8 +19,22 @@ export default function Footer() {
                         />
                     </div>
                 </div>
-                <div className="w-3/12 border h-full">
+                <div className="flex justify-center w-3/12 h-full p-3">
+                    {
+                        <div>
+                            {
+                                ProductList.map(({ id, name, link }) => (
+                                    <div key={id} className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
+                                        <Link href={`/products/${id}`}
+                                        >
+                                            <h2 className="text-xs">{name}</h2>
+                                        </Link>
+                                    </div>
+                                ))
+                            }
+                        </div>
 
+                    }
                 </div>
                 <div className="w-6/12 border h-full">
 
