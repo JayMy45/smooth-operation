@@ -2,7 +2,7 @@ export const CompanyList = [
     {
         id: 1,
         name: "ASEA",
-        link: "https://www.aseaglobal.com/en-us",
+        link: "https://1800386072.myasealive.com/",
         image: "/ASEA.png",
         alt: "ASEA Image",
     },

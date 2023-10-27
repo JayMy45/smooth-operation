@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { CompanyList } from "../data/CompanyList"
 
 export default function CompanyPage() {
@@ -8,6 +9,9 @@ export default function CompanyPage() {
                     {CompanyList.map(({ id, name, link, image, alt }) => (
                         <div key={id}>
                             <h1>{name}</h1>
+                            <Link href={link}>
+                                This is A Link
+                            </Link>
                         </div>
                     ))}
                 </div>
