@@ -9,16 +9,16 @@ export default function CompanyPage({ params }) {
     return (
         <>
             <section className="flex justify-center h-screen">
-                <div className="flex border h-1/2 w-1/2">
-                    <div>
-                        <h1 className="uppercase text-3xl">{company.name}</h1>
+                <div className="flex justify-around border rounded-xl h-1/2 w-1/2 p-2">
+                    <div className="flex flex-col justify-between py-5">
+                        <h1 className="uppercase text-5xl">{company.name}</h1>
                         <div className="border border-green-500">
                             <Link href={company.link}>
-                                Visit the site for {company.name} here
+                                <h3 className="italic text-sm">To learn more about {company.name} click here</h3>
                             </Link>
                         </div>
                     </div>
-                    <div>
+                    <div className="w-1/2 w-fit">
                         <div>
                             <p>{company.description}</p>
                         </div>
