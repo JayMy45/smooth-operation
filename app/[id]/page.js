@@ -8,14 +8,19 @@ export default function CompanyPage({ params }) {
 
     return (
         <>
-            <section className="h-screen">
-                <div className="text-center border">
+            <section className="flex justify-center h-screen">
+                <div className="flex border h-1/2 w-1/2">
                     <div>
-                        <h1>{company.name}</h1>
+                        <h1 className="uppercase text-3xl">{company.name}</h1>
                         <div className="border border-green-500">
                             <Link href={company.link}>
                                 Visit the site for {company.name} here
                             </Link>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>{company.description}</p>
                         </div>
                     </div>
                 </div>
