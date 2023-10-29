@@ -10,13 +10,15 @@ export default function Footer() {
             <footer className="flex justify-between items-center h-36 w-full px-7 bg-black">
                 <div className="flex justify-center items-center w-full md:w-3/12">
                     <div className="uppercase">
-                        <Image
-                            src="/smoothlogo2.png"
-                            alt="Smooth Operations Logo"
-                            className="w-fit"
-                            width={200}
-                            height={200}
-                        />
+                        <Link href="/">
+                            <Image
+                                src="/smoothlogo2.png"
+                                alt="Smooth Operations Logo"
+                                className="w-fit"
+                                width={200}
+                                height={200}
+                            />
+                        </Link>
                     </div>
                 </div>
                 <div className="hidden md:block w-3/12 h-full p-3">
@@ -50,8 +52,8 @@ export default function Footer() {
                     </a>
                 </div>
 
+                {/* branding */}
                 <HoustonBrand />
-
             </div>
         </>
     )
