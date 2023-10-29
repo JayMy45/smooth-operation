@@ -78,14 +78,14 @@ export default function Hamburger() {
                 </div>
                 <div className="flex flex-col py-4">
                     <ul>
-                        <Link href="/">
+                        <Link href="/2">
                             <li
                                 onClick={() => setNavbarOpen(false)}
                                 className="py-4 text-slate-100 cursor-pointer">
                                 <h2 className="uppercase">gofinity</h2>
                             </li>
                         </Link>
-                        <Link href="/about">
+                        <Link href="/1">
                             <li
                                 onClick={() => setNavbarOpen(false)}
                                 className="py-4 text-slate-100 cursor-pointer">
@@ -96,13 +96,13 @@ export default function Hamburger() {
                             <div onClick={toggleProduct} className="flex justify-between items-center cursor-pointer">
                                 {productOpen
                                     ? <>
-                                        <div className="">
+                                        <div className="py-4">
                                             <h2 className="uppercase">Featured Products</h2>
                                         </div>
                                         <BiSolidUpArrow className="ml-2" />
                                     </>
                                     : <>
-                                        <div className="">
+                                        <div className="py-4">
                                             <h2 className="uppercase">Featured Products</h2>
                                         </div>
                                         <BiSolidDownArrow className="ml-2" />
