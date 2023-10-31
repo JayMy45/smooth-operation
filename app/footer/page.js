@@ -30,7 +30,7 @@ export default function Footer() {
                                         <div key={id} className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
                                             <Link href={`/products/${id}`}
                                             >
-                                                <h2 className="text-xs">{name}</h2>
+                                                <h2 className="text-xs text-gray-100">{name}</h2>
                                             </Link>
                                         </div>
                                     ))

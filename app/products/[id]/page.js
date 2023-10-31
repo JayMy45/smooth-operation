@@ -1,10 +1,18 @@
+'use client'
+
 import { ProductList } from "@/app/data/ProductList";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Product({ params }) {
     const { id } = params;
     const product = ProductList.find((product) => product.id === Number(id));
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
+
 
     // will use this function to separate the description into section depending on the <br /> tag
     function renderDescription(description) {
@@ -15,18 +23,18 @@ export default function Product({ params }) {
 
     return (
         <>
-            <section className="flex justify-center items-center lg:h-[75vh] md:h-[70vh]">
+            <section className="flex justify-center items-center md:h-full py-3">
 
-                <div className="flex border dark:border-white  md:h-[30rem] md:w-[50rem] rounded-xl overflow-hidden bg-gray-300 dark:bg-gray-600 shadow-xl">
-                    <div className="flex flex-col text-center w-5/12 px-2 pb-10">
+                <div className="flex md:h-fit md:w-[50rem] rounded-xl overflow-hidden bg-gray-300 dark:bg-gray-600 shadow-sm shadow-slate-600">
+                    <div className="flex flex-col text-center w-5/12 px-2 pb-5 shadow-xl">
 
                         <div className="flex justify-center items-center h-5/6">
                             <Image
                                 className=""
                                 src={product.image}
                                 alt="Skinny Gummies"
-                                width={400}
-                                height={400}
+                                width={300}
+                                height={300}
                             />
                         </div>
                         <div className="flex justify-center items-end h-fit p-3">
@@ -66,7 +74,7 @@ export default function Product({ params }) {
                                     : null
                             }
                         </div>
-                        <div className="absolute bottom-0 right-0 border border-gray-400 rounded-br-xl p-2 mr-2 mb-2 shadow-2xl">
+                        <div className="absolute bottom-0 right-0 rounded-br-xl p-2 mr-2 mb-2 shadow-inner shadow-black hover:bg-slate-200 hover:text-black hover:font-bold">
                             <div className="">
                                 <Link href={`/`}>
                                     <h3 className="text-sm">Back to All Products</h3>
