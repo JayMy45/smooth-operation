@@ -31,7 +31,7 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className="hidden md:block relative top-0 h-32 bg-black text-white h-fit sticky z-10">
+            <nav className="hidden md:block relative top-0 h-32 border-b border-gray-950 bg-black text-white h-fit sticky z-10">
                 <div className="flex flex-row ">
                     <div className="flex justify-center items-center w-3/12 ">
 

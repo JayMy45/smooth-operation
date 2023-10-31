@@ -57,13 +57,24 @@ export default function Hamburger() {
 
     return (
         <>
-            <div className="flex items-center text-slate-100 dark:text-gray-200 cursor-pointer md:hidden mx-auto my-5 mr-5">
+            <div className="flex items-center text-slate-100 dark:text-gray-200 cursor-pointer md:hidden mx-auto my-5 ml-7">
                 <AiOutlineMenu
                     onClick={handleToggle}
                     size={30}
                     className=""
                 />
             </div>
+            <div className="flex items-center text-slate-100 dark:text-gray-200 cursor-pointer md:hidden mx-auto my-5 mr-5">
+                <Link href="/">
+                    <Image
+                        src={"/smoothlogo.png"}
+                        alt="Smooth Operations Logo"
+                        width={200}
+                        height={200}
+                    />
+                </Link>
+            </div>
+
             <div className={navbarOpen
                 ? "fixed left-0 top-0 w-[75%] h-screen bg-slate-800 p-7 ease-in duration-500 md:hidden z-50"
                 : "fixed left-[-100%]  w-[75%] h-screen top-0 p-10 ease-in duration-500 md:hidden z-50"
