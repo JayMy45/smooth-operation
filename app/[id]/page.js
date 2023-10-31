@@ -27,26 +27,28 @@ export default function CompanyPage({ params }) {
                             <p className="text-slate-200">{company.description}</p>
                         </div>
                     </div>
-                    <div className="flex justify-evenly mt-10">
-                        {
-                            ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt, link }) => (
-                                <Link href={link}>
-                                    <div className="hover:shadow-lg p-3">
-                                        <Image
-                                            src={image}
-                                            alt={alt}
-                                            width={200}
-                                            height={200}
-                                            className="rounded-full"
-                                        />
-                                        <div className="mt-3">
-                                            <h2 className="text-center text-slate-200 font-semibold">{name}</h2>
+                    <div className="hidden md:block">
+                        <div className="flex justify-evenly mt-10">
+                            {
+                                ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt, link }) => (
+                                    <Link href={link}>
+                                        <div className="hover:shadow-lg p-3">
+                                            <Image
+                                                src={image}
+                                                alt={alt}
+                                                width={200}
+                                                height={200}
+                                                className="rounded-full"
+                                            />
+                                            <div className="mt-3">
+                                                <h2 className="text-center text-slate-200 font-semibold">{name}</h2>
+                                            </div>
                                         </div>
-                                    </div>
-                                </Link>
+                                    </Link>
 
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </section>
