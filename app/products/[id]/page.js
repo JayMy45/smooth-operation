@@ -25,14 +25,14 @@ export default function Product({ params }) {
         <>
             <section className="flex justify-center items-center md:h-full py-3">
 
-                <div className="flex md:h-fit md:w-[50rem] rounded-xl overflow-hidden bg-gray-300 dark:bg-gray-600 shadow-sm shadow-slate-600">
-                    <div className="flex flex-col text-center w-5/12 px-2 pb-5 shadow-xl">
+                <div className="flex flex-col md:flex-row md:h-fit md:w-[50rem] md:rounded-xl overflow-hidden bg-gray-300 dark:bg-gray-600 shadow-sm shadow-slate-600">
+                    <div className="flex flex-col text-center md:w-5/12 px-2 pb-5 shadow-xl">
 
-                        <div className="flex justify-center items-center h-5/6">
+                        <div className="flex justify-center items-center h-5/6 pt-3">
                             <Image
                                 className=""
                                 src={product.image}
-                                alt="Skinny Gummies"
+                                alt={product.name}
                                 width={300}
                                 height={300}
                             />
@@ -48,7 +48,7 @@ export default function Product({ params }) {
                             </Link>
                         </div>
                     </div>
-                    <div className="w-7/12 p-8 relative">
+                    <div className="md:w-7/12 p-8 relative">
 
                         {/* Details Header and more information buttons */}
                         <div className="flex flex-col justify-between mt-16">
@@ -74,7 +74,7 @@ export default function Product({ params }) {
                                     : null
                             }
                         </div>
-                        <div className="absolute bottom-0 right-0 rounded-br-xl p-2 mr-2 mb-2 shadow-inner shadow-black hover:bg-slate-200 hover:text-black hover:font-bold">
+                        <div className="absolute bottom-0 right-0 md:rounded-br-xl p-2 mr-2 mb-2 shadow-inner shadow-black hover:bg-slate-200 hover:text-black hover:font-bold">
                             <div className="">
                                 <Link href={`/`}>
                                     <h3 className="text-sm">Back to All Products</h3>
