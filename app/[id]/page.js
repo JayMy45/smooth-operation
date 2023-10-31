@@ -30,20 +30,20 @@ export default function CompanyPage({ params }) {
                     <div className="flex justify-evenly mt-10">
                         {
                             ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt, link }) => (
-                                <div className="">
-                                    <Image
-                                        src={image}
-                                        alt={alt}
-                                        width={200}
-                                        height={200}
-                                        className="rounded-full"
-                                    />
-                                    <div className="mt-3">
-                                        <Link href={link}>
-                                            <h2 className="text-center text-slate-200 hover:text-indigo-300">{name}</h2>
-                                        </Link>
+                                <Link href={link}>
+                                    <div className="hover:shadow-lg p-3">
+                                        <Image
+                                            src={image}
+                                            alt={alt}
+                                            width={200}
+                                            height={200}
+                                            className="rounded-full"
+                                        />
+                                        <div className="mt-3">
+                                            <h2 className="text-center text-slate-200 font-semibold">{name}</h2>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
 
                             ))
                         }
