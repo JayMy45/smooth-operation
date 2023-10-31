@@ -23,7 +23,7 @@ export default function Product({ params }) {
 
     return (
         <>
-            <section className="flex justify-center items-center md:h-full py-3">
+            <section className="flex justify-center items-center min-h-full py-3">
 
                 <div className="flex flex-col md:flex-row md:h-fit md:w-[50rem] md:rounded-xl overflow-hidden bg-gray-300 dark:bg-gray-600 shadow-sm shadow-slate-600">
                     <div className="flex flex-col text-center md:w-5/12 px-2 pb-5 shadow-xl">
