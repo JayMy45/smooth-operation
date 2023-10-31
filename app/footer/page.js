@@ -7,14 +7,14 @@ export default function Footer() {
 
     return (
         <>
-            <footer className="flex justify-between items-center h-36 w-full px-7 bg-black">
+            <footer className="flex justify-between items-center h-fit md:h-36 w-full px-7 bg-black">
                 <div className="flex justify-center items-center w-full md:w-3/12">
                     <div className="uppercase">
                         <Link href="/">
                             <Image
-                                src="/smoothlogo2.png"
+                                src="/smoothlogo.png"
                                 alt="Smooth Operations Logo"
-                                className="w-fit"
+                                className="w-fit p-3"
                                 width={200}
                                 height={200}
                             />
