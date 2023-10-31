@@ -36,13 +36,16 @@ export default function NavBar() {
                     <div className="flex justify-center items-center w-3/12 ">
 
                         <div className="uppercase">
-                            <Image
-                                src="/smoothlogo1.png"
-                                alt="Smooth Operations Logo"
-                                className="bg-black"
-                                width={200}
-                                height={200}
-                            />
+                            <Link href="/">
+
+                                <Image
+                                    src="/smoothlogo1.png"
+                                    alt="Smooth Operations Logo"
+                                    className="bg-black"
+                                    width={200}
+                                    height={200}
+                                />
+                            </Link>
                         </div>
                     </div>
                     <div className="flex justify-around items-center w-6/12 ">
