@@ -8,8 +8,17 @@ export default function CompanyPage({ params }) {
     const { id } = params;
     const company = CompanyList.find((company) => company.id === Number(id));
 
+    if (!company) {
+        return (
+            <div className="flex justify-center items-center h-full p-5">
+                <h1>Company not found</h1>
+            </div>
+        );
+    }
+
     return (
         <>
+
             <section className="flex justify-center item-center h-full p-5">
                 <div className={`flex flex-col justify-around md:justify-around ${company.bgColor} rounded-xl h-fit px-10 py-5 shadow-sm shadow-gray-800`}>
                     <div className="flex flex-col justify-between md:justify-normal pb-5">
@@ -30,8 +39,8 @@ export default function CompanyPage({ params }) {
                     <div className="hidden md:block">
                         <div className="flex justify-evenly mt-10">
                             {
-                                ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt, link }) => (
-                                    <Link href={`/products/${id}`}>
+                                ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt }) => (
+                                    <Link key={id} href={`/products/${id}`}>
                                         <div className="hover:shadow-lg p-3">
                                             <Image
                                                 src={image}

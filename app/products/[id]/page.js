@@ -53,7 +53,7 @@ export default function Product({ params }) {
                         {/* Details Header and more information buttons */}
                         <div className="flex flex-col justify-between mt-16">
                             <div className="">
-                                <header className="text-4xl">{product.name} Details</header>
+                                <header className="text-4xl text-center md:text-left">{product.name} Details</header>
                             </div>
                         </div>
 
@@ -63,7 +63,7 @@ export default function Product({ params }) {
                                 <h2 className="text-sm">{renderDescription(product.description)}</h2>
                             }
                         </div>
-                        <div className="flex  justify-around p-5">
+                        <div className="flex justify-around p-5 mb-5 md:mb-0">
                             {product.video && product.pdf
                                 ? <>
                                     <Link href={product.video} className="bg-gray-700 rounded-lg px-5 py-2">Video</Link>
@@ -74,13 +74,13 @@ export default function Product({ params }) {
                                     : null
                             }
                         </div>
-                        <div className="absolute bottom-0 right-0 md:rounded-br-xl p-2 mr-2 mb-2 shadow-inner shadow-black hover:bg-slate-200 hover:text-black hover:font-bold">
-                            <div className="">
-                                <Link href={`/`}>
+                        <Link href={`/`}>
+                            <div className="absolute bottom-0 right-0 md:rounded-br-xl p-2 mr-2 mb-2 shadow-inner shadow-black hover:bg-slate-200 hover:text-black hover:font-bold">
+                                <div className="">
                                     <h3 className="text-sm">Back to All Products</h3>
-                                </Link>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>
