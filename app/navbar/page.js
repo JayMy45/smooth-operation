@@ -59,6 +59,7 @@ export default function NavBar() {
                                 <h2 className="uppercase">asea</h2>
                             </Link>
                         </div>
+
                         <div className="hover:text-indigo-400 relative" ref={dropdownRef}>
                             <div onClick={handleToggle} className="flex justify-between items-center cursor-pointer">
                                 {productOpen
@@ -105,9 +106,12 @@ export default function NavBar() {
 
 
                     </div>
-                    <div className="w-3/12 ">
-
-
+                    <div className="flex justify-center items-center w-3/12">
+                        <div className="border py-3 px-7 rounded-2xl hover:bg-gray-300 hover:shadow-md hover:shadow-slate-700 hover:text-indigo-400 hover:font-semibold">
+                            <Link href="/">
+                                <h2 className="uppercase">contact us</h2>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </nav>
