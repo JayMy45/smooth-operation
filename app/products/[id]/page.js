@@ -74,13 +74,13 @@ export default function Product({ params }) {
                                     : null
                             }
                         </div>
-                        <div className="absolute bottom-0 right-0 md:rounded-br-xl p-2 mr-2 mb-2 shadow-inner shadow-black hover:bg-slate-200 hover:text-black hover:font-bold">
-                            <div className="">
-                                <Link href={`/`}>
+                        <Link href={`/`}>
+                            <div className="absolute bottom-0 right-0 md:rounded-br-xl p-2 mr-2 mb-2 shadow-inner shadow-black hover:bg-slate-200 hover:text-black hover:font-bold">
+                                <div className="">
                                     <h3 className="text-sm">Back to All Products</h3>
-                                </Link>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>

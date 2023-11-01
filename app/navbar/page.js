@@ -89,7 +89,7 @@ export default function NavBar() {
                                         </Link>
                                     </div>
                                     {
-                                        ProductList.map(({ id, name, link }) => (
+                                        ProductList.map(({ id, name }) => (
                                             <div key={id} className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
                                                 <Link href={`/products/${id}`}
                                                     onClick={handleToggle}
