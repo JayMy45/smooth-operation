@@ -53,7 +53,7 @@ export default function Product({ params }) {
                         {/* Details Header and more information buttons */}
                         <div className="flex flex-col justify-between mt-16">
                             <div className="">
-                                <header className="text-4xl">{product.name} Details</header>
+                                <header className="text-4xl text-center md:text-left">{product.name} Details</header>
                             </div>
                         </div>
 
@@ -63,7 +63,7 @@ export default function Product({ params }) {
                                 <h2 className="text-sm">{renderDescription(product.description)}</h2>
                             }
                         </div>
-                        <div className="flex  justify-around p-5">
+                        <div className="flex justify-around p-5 mb-5 md:mb-0">
                             {product.video && product.pdf
                                 ? <>
                                     <Link href={product.video} className="bg-gray-700 rounded-lg px-5 py-2">Video</Link>
