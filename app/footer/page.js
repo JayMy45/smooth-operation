@@ -21,27 +21,21 @@ export default function Footer() {
                         </Link>
                     </div>
                 </div>
-                <div className="hidden md:block w-3/12 h-full p-3">
-                    <div className="flex justify-center">
+                <div className="hidden md:block w-9/12 p-3">
+                    <div className="flex flex-row justify-around">
                         {
-                            <div className="hidden md:block">
-                                {
-                                    ProductList.map(({ id, name, link }) => (
-                                        <div key={id} className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
-                                            <Link href={`/products/${id}`}
-                                            >
-                                                <h2 className="text-xs text-gray-100">{name}</h2>
-                                            </Link>
-                                        </div>
-                                    ))
-                                }
-                            </div>
+                            ProductList.map(({ id, name }) => (
+                                <div key={id} className="w-28 p-1hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
+                                    <div className="">
+                                        <Link href={`/products/${id}`}>
+                                            <h2 className="text-xs text-gray-100 text-center">{name}</h2>
+                                        </Link>
 
+                                    </div>
+                                </div>
+                            ))
                         }
                     </div>
-                </div>
-                <div className="hidden md:block w-6/12 border h-full">
-
                 </div>
 
             </footer>
