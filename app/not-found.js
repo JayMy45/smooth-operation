@@ -20,12 +20,12 @@ export default function NotFound() {
                 <Image
                     src="/404Logo.png"
                     alt="404 Logo"
-                    width={750}
-                    height={750}
-                    className='rounded-lg'
+                    width={400}
+                    height={400}
+                    className='rounded-lg bg-black border-2 border border-red-500'
                 />
             </div>
-            <h2 className='text-center text-xl font-semibold'>request Not Found</h2>
+            <h2 className='text-center text-xl font-semibold mt-2'>Request Not Found</h2>
         </div>
     )
 }
