@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { CompanyList } from "../data/CompanyList"
-import { ProductList } from "../data/ProductList";
+import { CompanyList } from "@/app/data/CompanyList";
+import { ProductList } from "@/app/data/ProductList";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CompanyPage({ params }) {
 

@@ -50,12 +50,12 @@ export default function NavBar() {
                     </div>
                     <div className="flex justify-around items-center w-6/12 ">
                         <div className="hover:-b">
-                            <Link href="/2">
+                            <Link href="/company/2">
                                 <h2 className="uppercase">gofinity</h2>
                             </Link>
                         </div>
                         <div className="flex justify-center items-center uppercase">
-                            <Link href="/1">
+                            <Link href="/company/1">
                                 <h2 className="uppercase">asea</h2>
                             </Link>
                         </div>
