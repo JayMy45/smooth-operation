@@ -89,14 +89,14 @@ export default function Hamburger() {
                 </div>
                 <div className="flex flex-col py-4">
                     <ul>
-                        <Link href="/2">
+                        <Link href="/company/2">
                             <li
                                 onClick={() => setNavbarOpen(false)}
                                 className="py-4 text-slate-100 cursor-pointer">
                                 <h2 className="uppercase">gofinity</h2>
                             </li>
                         </Link>
-                        <Link href="/1">
+                        <Link href="/company/1">
                             <li
                                 onClick={() => setNavbarOpen(false)}
                                 className="py-4 text-slate-100 cursor-pointer">
