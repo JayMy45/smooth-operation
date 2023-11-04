@@ -14,13 +14,13 @@ export default function Contact() {
     // loading state for submit button
     const [loading, setLoading] = useState(false);
 
-    // checkbox state to track which services are selected
+    // checkbox state to track which products are selected
     const [checkedOptions, setCheckedOptions] = useState(new Set())
 
     // set initial state of checkbox to include Mowing and Trimming
     useEffect(() => {
         const initialSet = new Set();
-        // for each service, if name is Mowing or Trimming, add id to initialSet
+        // for each product, if name is Mowing or Trimming, add id to initialSet
         ProductList.forEach(({ id, name }) => {
             if (name === "Mowing" || name === "Trimming") {
                 initialSet.add(id);
@@ -50,7 +50,7 @@ export default function Contact() {
             email: event.target.email.value,
             phone: event.target.phone.value,
             message: event.target.message.value,
-            services: Array.from(checkedOptions),
+            products: Array.from(checkedOptions),
         };
 
         console.log(data);

@@ -1,11 +1,11 @@
 // load environment variables from .env file
 require('dotenv').config();
 
-import { serviceData } from "@/app/data/serviceData";
+import { ProductList } from "@/app/data/ProductList";
 import nodemailer from "nodemailer";
 
 export default async function ContactAPI(req, res) {
-    const { name, email, phone, message, services } = req.body;
+    const { name, email, phone, message, products } = req.body;
 
     // check if all fields are provided
     if (!name || !email || !phone || !message) {
@@ -34,26 +34,26 @@ export default async function ContactAPI(req, res) {
 
     // try to send email (see nodemailer docs for more info)
     try {
-        // Map the service IDs to their names
-        const serviceNames = services.map(id => {
-            const service = serviceData.find(service => service.id === id);
-            return service ? service.name : undefined;
+        // Map the product IDs to their names
+        const productNames = products.map(id => {
+            const product = ProductList.find(product => product.id === id);
+            return product ? product.name : undefined;
         }).filter(Boolean); // this filter removes undefined values
 
-        // Create a string of service names separated by commas
-        const servicesString = serviceNames.join(", ");
+        // Create a string of product names separated by commas
+        const productsString = productNames.join(", ");
 
         const mail = await transporter.sendMail({
             from: user,
             to: "jnmyers774@gmail.com",
             replyTo: email,
-            subject: `Jones Landscaping Services Submission ${name}`,
+            subject: `Jones Landscaping Products Submission ${name}`,
             html: `
             <p>Name: ${name}</p>
             <p>Email: ${email}</p>
             <p>Phone: ${phone}</p>
             <p>Message: ${message}</p>
-            <p><strong>Services Interested In</strong>: ${servicesString}</p>  <!-- Include the services here -->
+            <p><strong>Products Interested In</strong>: ${productsString}</p>  <!-- Include the products here -->
             `,
         });
 
