@@ -74,7 +74,7 @@ export default function Contact() {
             <section id='contact' className="h-full p-2 pt-16 md:pb-5 md:px-1 lg:px-10 md:pt-4">
                 <form onSubmit={handleSubmit}>
                     <div className="">
-                        <div className="grid grid-col-1 gap-3">
+                        <div className="grid grid-col-1 gap-3 xl:gap-6">
                             <div className="mx-auto">
                                 <h2 className="text-4xl font-semibold dark:text-slate-100">Contact Us</h2>
                             </div>
