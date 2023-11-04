@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import { serviceData } from "../data/serviceData";
+import { ProductList } from '../data/ProductList';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -21,7 +21,7 @@ export default function Contact() {
     useEffect(() => {
         const initialSet = new Set();
         // for each service, if name is Mowing or Trimming, add id to initialSet
-        serviceData.forEach(({ id, name }) => {
+        ProductList.forEach(({ id, name }) => {
             if (name === "Mowing" || name === "Trimming") {
                 initialSet.add(id);
             }
@@ -85,16 +85,12 @@ export default function Contact() {
 
     return (
         <>
-            <section id='contact' className="h-full p-2 pt-16 md:pb-5 md:px-1 lg:px-10 md:pt-28">
+            <section id='contact' className="h-full p-2 pt-16 md:pb-5 md:px-1 lg:px-10 md:pt-4">
                 <form onSubmit={handleSubmit}>
                     <div className="">
-                        <div className="w-full border-b border-stone-700 dark:border-slate-100 mb-10 p-2">
-                            <h2 className="uppercase font-bold text-stone-700 dark:text-slate-100 text-2xl">Contact Us</h2>
-                        </div>
-
-                        <div className="grid grid-col-1 gap-7">
+                        <div className="grid grid-col-1 gap-3">
                             <div className="mx-auto">
-                                <h2 className="text-xl font-semibold dark:text-slate-100">Get in Touch</h2>
+                                <h2 className="text-4xl font-semibold dark:text-slate-100">Contact Us</h2>
                             </div>
                             {/* Name */}
                             <div className="p-1 border  border-slate-800 dark:border-slate-100 rounded-sm w-11/12 md:w-2/4 mx-auto">
@@ -150,11 +146,11 @@ export default function Contact() {
                                 />
                             </div>
                             <div className="mx-auto hidden md:block">
-                                <h2>Add On Services</h2>
+                                <h2 className='italic text-sm'>Select the product(s) that interest you...</h2>
                             </div>
-                            <section className="mx-auto pl-16">
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                                    {serviceData.map(({ id, name }) => (
+                            <section className="mx-auto ">
+                                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                                    {ProductList.map(({ id, name }) => (
                                         <div key={id} className="">
                                             <input
                                                 onChange={(e) => {
