@@ -17,11 +17,6 @@ export default function Contact() {
     // checkbox state to track which products are selected
     const [checkedOptions, setCheckedOptions] = useState(new Set())
 
-    useEffect(() => {
-        setCheckedOptions(initialSet);
-    }, [resetCount]);
-
-
 
     // notify functions to display toast messages
     const notifySuccess = () => {
