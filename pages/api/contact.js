@@ -47,7 +47,7 @@ export default async function ContactAPI(req, res) {
             from: user,
             to: "jnmyers774@gmail.com",
             replyTo: email,
-            subject: `Jones Landscaping Products Submission ${name}`,
+            subject: `Contact ASEA/GOFINITY for ${name}`,
             html: `
             <p>Name: ${name}</p>
             <p>Email: ${email}</p>
