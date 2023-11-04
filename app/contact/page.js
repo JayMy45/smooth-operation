@@ -17,16 +17,7 @@ export default function Contact() {
     // checkbox state to track which products are selected
     const [checkedOptions, setCheckedOptions] = useState(new Set())
 
-    // set initial state of checkbox to include Mowing and Trimming
     useEffect(() => {
-        const initialSet = new Set();
-        // for each product, if name is Mowing or Trimming, add id to initialSet
-        ProductList.forEach(({ id, name }) => {
-            if (name === "Mowing" || name === "Trimming") {
-                initialSet.add(id);
-            }
-        });
-
         setCheckedOptions(initialSet);
     }, [resetCount]);
 
