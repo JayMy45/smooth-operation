@@ -9,18 +9,20 @@ export default function CompanyList() {
                     <div>
                         <Link href="/company/1">
                             <Image
-                                src={"/ASEAlogo.png"}
+                                src={"/ASEA.png"}
                                 height={400}
                                 width={400}
+                                className="bg-gray-300 rounded-lg"
                             />
                         </Link>
                     </div>
                     <div>
                         <Link href="/company/2">
                             <Image
-                                src={"/GOFINITYlogo.png"}
+                                src={"/GOFINITY.png"}
                                 height={400}
                                 width={400}
+                                className="bg-gray-300 rounded-lg"
                             />
                         </Link>
                     </div>
