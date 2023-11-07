@@ -13,7 +13,7 @@ export default function CompanyList() {
                                 alt="ASEA Logo Image Link to company description page"
                                 height={400}
                                 width={400}
-                                className="bg-gradient-to-r from-black via-blue-700 to-black"
+                                className="bg-gradient-to-r from-transparent via-blue-700 to-transparent dark:bg-gradient-to-r dark:from-black dark:via-blue-700 dark:to-black"
                             />
                         </Link>
                     </div>
@@ -24,7 +24,7 @@ export default function CompanyList() {
                                 alt="GOFINITY Logo Image Link to company description page"
                                 height={400}
                                 width={400}
-                                className="bg-gradient-to-r from-black via-pink-600 to-black"
+                                className="bg-gradient-to-r from-transparent via-pink-600 to-transparent dark:bg-gradient-to-r dark:from-black dark:via-pink-600 dark:to-black"
                             />
                         </Link>
                     </div>
