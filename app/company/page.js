@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function CompanyList() {
     return (
         <>
-            <section className="h-full">
+            <section className="min-h-full py-9">
                 <div className="flex flex-col md:flex-row justify-center items-center space-x-2 space-y-5 md:space-y-0 mb-5">
                     <div className="rounded-lg overflow-hidden hover:border hover:border-gray-800 hover:shadow-lg hover:shadow-gray-500">
                         <Link href="/company/1">
