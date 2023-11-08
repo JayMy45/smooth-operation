@@ -24,22 +24,26 @@ export default function ProductsPage() {
 
                                 {/* images and link div */}
                                 <div className="flex flex-col justify-around md:w-2/6">
+
                                     <div className="h-fit mx-auto">
-                                        <Image
-                                            src={image}
-                                            alt={alt}
-                                            className=""
-                                            // all images are 450 X 500 png files!!!
-                                            width={200}
-                                            height={200}
-                                            priority
-                                        />
+                                        <Link href={`/products/${id}`}>
+                                            <Image
+                                                src={image}
+                                                alt={alt}
+                                                className=""
+                                                // all images are 450 X 500 png files!!!
+                                                width={200}
+                                                height={200}
+                                                priority
+                                            />
+                                        </Link>
                                     </div>
                                     <div className=" w-fit p-2 rounded-md mx-auto">
                                         <Link href={`/products/${id}`}>
                                             <h3 className="text-xxs md:text-xs">Click here to learn more</h3>
                                         </Link>
                                     </div>
+
                                 </div>
 
                                 {/* header and description div */}
