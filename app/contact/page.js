@@ -17,6 +17,7 @@ export default function Contact() {
     // checkbox state to track which products are selected
     const [checkedOptions, setCheckedOptions] = useState(new Set())
 
+    // phone number state to format phone number
     const [phoneNumber, setPhoneNumber] = useState('');
 
 
@@ -72,6 +73,8 @@ export default function Contact() {
         }
     };
 
+
+    // format phone number as user types
     const handlePhoneChange = (e) => {
         let input = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
         if (input.length > 10) {
