@@ -17,6 +17,10 @@ export default function Contact() {
     // checkbox state to track which products are selected
     const [checkedOptions, setCheckedOptions] = useState(new Set())
 
+    // phone number state to format phone number
+    const [phoneNumber, setPhoneNumber] = useState('');
+
+
 
     // notify functions to display toast messages
     const notifySuccess = () => {
@@ -67,7 +71,26 @@ export default function Contact() {
             // display toast message when email fails to send
             notifyError();
         }
-    }
+    };
+
+
+    // format phone number as user types
+    const handlePhoneChange = (e) => {
+        let input = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+        if (input.length > 10) {
+            input = input.slice(0, 10); // Limit to 10 digits
+        }
+        // Format the phone number as XXX-XXX-XXXX
+        let formattedNumber = '';
+        for (let i = 0; i < input.length; i++) {
+            if (i === 3 || i === 6) {
+                formattedNumber += '-';
+            }
+            formattedNumber += input[i];
+        }
+        setPhoneNumber(formattedNumber);
+    };
+
 
     return (
         <>
@@ -101,6 +124,8 @@ export default function Contact() {
                                     maxLength={15}
                                     placeholder="Phone"
                                     autoComplete="on"
+                                    value={phoneNumber}
+                                    onChange={handlePhoneChange}
                                 />
                             </div>
 
