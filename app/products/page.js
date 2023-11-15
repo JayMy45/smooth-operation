@@ -17,7 +17,7 @@ export default function ProductsPage() {
             <section className="flex flex-col justify-center">
 
                 {/* Product Card1 */}
-                <div className="grid grid-cols w-full p-10 h-fit bg-gradient-to-r from-indigo-900">
+                <div className="grid grid-cols w-full p-10 h-fit bg-gradient-to-r from-indigo-900 text-gray-200">
                     {
                         ProductList.map(({ id, name, image, alt, description, company }) => (
                             <div key={id} className="flex flex-col md:flex-row justify-around space-x-5 h-full py-5 mb-8 md:mb-4">
