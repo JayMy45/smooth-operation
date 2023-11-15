@@ -49,12 +49,17 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className="flex justify-around items-center w-6/12 ">
-                        <div className="hover:-b">
+                        <div className="hover:border-b">
+                            <Link href="/">
+                                <h2 className="uppercase">home</h2>
+                            </Link>
+                        </div>
+                        <div className="hover:border-b">
                             <Link href="/company/2">
                                 <h2 className="uppercase">gofinity</h2>
                             </Link>
                         </div>
-                        <div className="flex justify-center items-center uppercase">
+                        <div className="hover:border-b">
                             <Link href="/company/1">
                                 <h2 className="uppercase">asea</h2>
                             </Link>
