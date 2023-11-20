@@ -100,6 +100,13 @@ export default function Hamburger() {
 
                 <div className="flex flex-col py-4">
                     <ul>
+                        <Link href="/">
+                            <li
+                                onClick={() => setNavbarOpen(false)}
+                                className="py-4 text-slate-100 cursor-pointer">
+                                <h2 className="uppercase">home</h2>
+                            </li>
+                        </Link>
                         <Link href="/company/2">
                             <li
                                 onClick={() => setNavbarOpen(false)}
