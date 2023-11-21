@@ -23,7 +23,7 @@ export default function CompanyPage({ params }) {
                 <div className={`flex flex-col justify-around md:justify-around ${company.bgColor} rounded-xl h-fit px-10 py-5 shadow-sm shadow-gray-800`}>
                     <div className="flex flex-col justify-between md:justify-normal pb-5">
                         <div>
-                            <h1 className="uppercase text-5xl text-gray-200 mb-4">{company.name}</h1>
+                            <h1 className="uppercase text-7xl text-gray-200 font-bold mb-4">{company.name}</h1>
                         </div>
                         <div className="border border-slate-200 p-2 text-center rounded-lg w-fit hover:bg-slate-300 ">
                             <Link href={company.link}>
