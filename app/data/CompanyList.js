@@ -6,7 +6,7 @@ export const CompanyList = [
         image: "/ASEA.png",
         alt: "ASEA Image",
         bgColor: "bg-blue-900",
-        description: "ASEA stands as a beacon in the corporate world, embodying an ethos that sets it apart. Rooted deeply in the belief that every individual has three fundamental needs - to believe, to belong, and to become - ASEA strives to fulfill these for every Associate. Our commitment is not just to provide life-changing products that our Associates can believe in, but also to foster a sense of belonging within an organization guided by unwavering principles. But perhaps our most profound commitment is to personal and professional growth, enabling our Associates to become the best versions of themselves."
+        description: "ASEA, a pioneer in cellular signaling technology, stands as a beacon of innovation in the health and wellness industry. Their groundbreaking products, powered by the Redox Signaling molecule, are designed to support the body's natural ability to maintain cellular health and function. By promoting cellular communication and resilience, ASEA's products offer a holistic approach to well-being, addressing a wide range of health concerns and promoting overall vitality."
     },
     {
         id: 2,
@@ -15,6 +15,6 @@ export const CompanyList = [
         image: "/GOFINITY.png",
         alt: "GOFINITY Image",
         bgColor: "bg-gradient-to-r from-red-800 to-red-400",
-        description: "GOFINITY is more than just a haircare brand; it's a movement. Born from humble beginnings, GOFINITY has now cemented its place on the global stage as a renowned haircare innovator. But our vision doesn't stop at creating exceptional products. We've embarked on an exhilarating new journey, offering individuals the chance to craft their entrepreneurial destiny. By providing opportunities to build their own businesses under the GOFINITY umbrella, we're not only reshaping the world of haircare but also redefining what's possible. With GOFINITY, the horizon is limitless. Join us and see for yourself: With GOFINITY... It's Possible!"
+        description: "GOFINITY, a multi-faceted brand, offers haircare and fitness products designed to promote overall well-being and address a wide range of hair and fitness concerns. From shampoos, conditioners, and styling products to pre-workout supplements, protein powders, and fitness challenges, GOFINITY provides comprehensive solutions for achieving your health and beauty goals. Their innovative formulas, crafted with the finest ingredients, work to enhance hair health, boost athletic performance, and promote faster recovery from workouts, all while providing accessible and affordable options for individuals seeking to improve their overall health and well-being.",
     }
 ]
