@@ -61,9 +61,11 @@ export default function ProductsPage() {
                                         </div>
 
                                         <div className="h-fit">
-                                            <footer>
-                                                <h3 className="h-fit text-xxs font-bold italic">{company}</h3>
-                                            </footer>
+                                            <Link href={`/company`}>
+                                                <footer>
+                                                    <h3 className="h-fit text-xxs font-bold italic">{company}</h3>
+                                                </footer>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
