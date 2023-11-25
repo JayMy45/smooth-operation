@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${robotoCondensed.className}`}>
+      <body className={`${inter.className} ${robotoCondensed.variable}`}>
         <div className="flex flex-col min-h-screen">
           <NavBar />
           <div className="flex-grow"> {/* This div will expand and push the footer down */}
