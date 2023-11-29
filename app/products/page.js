@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProductList } from "../data/ProductList";
+import { Roboto_Condensed } from 'next/font/google'
+
+const robotoCondensed = Roboto_Condensed({
+    subsets: ['latin'],
+    weight: ['400', '700'],
+});
+
 
 export default function ProductsPage() {
 
@@ -63,7 +70,7 @@ export default function ProductsPage() {
                                         <div className="h-fit">
                                             <Link href={`/company`}>
                                                 <footer>
-                                                    <h3 className="h-fit text-xxs font-bold italic">{company}</h3>
+                                                    <h3 className={`h-fit text-xxs font-bold ${robotoCondensed.className}`}>{company}</h3>
                                                 </footer>
                                             </Link>
                                         </div>
