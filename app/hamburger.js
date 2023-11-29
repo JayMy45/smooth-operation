@@ -81,16 +81,15 @@ export default function Hamburger() {
             }
             >
                 <div className="flex flex-row justify-between w-full items-center text-slate-100 justify-end">
-                    <div className="border py-3 px-7 rounded-2xl hover:bg-gray-300 hover:shadow-md hover:shadow-slate-700 hover:text-indigo-400 hover:font-semibold">
-                        <Link href="/contact">
-                            <h2
-                                onClick={() => setNavbarOpen(false)}
-                                className="uppercase text-yellow-600"
-                            >
-                                contact us
-                            </h2>
-                        </Link>
-                    </div>
+                    <Link
+                        href="/contact"
+                        className="border py-3 px-7 rounded-2xl hover:bg-gray-300 hover:shadow-md hover:shadow-slate-700 hover:text-indigo-400 hover:font-semibold"
+                        onClick={() => setNavbarOpen(false)}
+                    >
+                        <h2 className="uppercase text-yellow-600">
+                            contact us
+                        </h2>
+                    </Link>
                     <div onClick={handleToggle} className="cursor-pointer">
                         <AiOutlineClose
                             size={30}
