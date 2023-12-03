@@ -49,21 +49,23 @@ export default function CompanyPage({ params }) {
                     <div className="hidden md:block">
                         <div className="flex justify-evenly mt-10">
                             {
-                                ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt }) => (
-                                    <Link key={id} href={`/products/${id}`}>
-                                        <div className="hover:shadow-lg p-3">
-                                            <Image
-                                                src={image}
-                                                alt={alt}
-                                                width={200}
-                                                height={200}
-                                                className=""
-                                            />
-                                            <div className="mt-3">
-                                                <h2 className="text-center text-slate-200 font-semibold">{name}</h2>
+                                ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt, active }) => (
+                                    active
+                                        ? <Link key={id} href={`/products/${id}`}>
+                                            <div className="hover:shadow-lg p-3">
+                                                <Image
+                                                    src={image}
+                                                    alt={alt}
+                                                    width={200}
+                                                    height={200}
+                                                    className=""
+                                                />
+                                                <div className="mt-3">
+                                                    <h2 className="text-center text-slate-200 font-semibold">{name}</h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </Link>
+                                        </Link>
+                                        : null
 
                                 ))
                             }
