@@ -167,15 +167,18 @@ export default function Hamburger() {
                     </ul>
                 </div>
                 <div className="absolute bottom-0">
-                    <div className="flex flex-row justify-around pt-10 items-center">
-                        <Image
-                            src="/smoothlogo2.png"
-                            alt="Smooth Operations Logo"
-                            className="w-fit"
-                            width={200}
-                            height={200}
-                        />
-                    </div>
+                    <Link href="/" onClick={() => setNavbarOpen(false)}>
+                        <div className="flex flex-row justify-around pt-10 items-center">
+                            <Image
+                                src="/smoothlogo2.png"
+                                alt="Smooth Operations Logo"
+                                className="w-fit"
+                                width={200}
+                                height={200}
+                            />
+                        </div>
+
+                    </Link>
                 </div>
             </div>
         </>
