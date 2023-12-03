@@ -49,8 +49,8 @@ export default function CompanyPage({ params }) {
                     <div className="hidden md:block">
                         <div className="flex justify-evenly mt-10">
                             {
-                                ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt, active }) => (
-                                    active
+                                ProductList.filter((product) => product.company === company.name).map(({ id, name, image, alt, companyActive }) => (
+                                    companyActive
                                         ? <Link key={id} href={`/products/${id}`}>
                                             <div className="hover:shadow-lg p-3">
                                                 <Image
