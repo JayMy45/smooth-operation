@@ -63,15 +63,19 @@ export default function Product({ params }) {
                                 <h2 className="text-sm">{renderDescription(product.description)}</h2>
                             }
                         </div>
-                        <div className="flex justify-around p-5 mb-5 md:mb-0">
+                        <div className="flex justify-around p-5 mb-5 md:mb-4">
+                            {/* I know multi-layer ternaries aren't great but here it is... */}
                             {product.video && product.pdf
                                 ? <>
                                     <Link href={product.video} className="bg-gray-700 rounded-lg px-5 py-2">Video</Link>
-                                    <Link href={product.pdf} className="bg-gray-700 rounded-lg px-5 py-2">Downloads</Link>
+                                    <Link href={product.pdf} target="-blank" className="bg-gray-700 rounded-lg px-5 py-2">Downloads</Link>
                                 </>
                                 : product.video && !product.pdf
                                     ? <Link href={product.video} className="bg-gray-700 rounded-lg px-5 py-2">Video</Link>
-                                    : null
+
+                                    : product.pdf && !product.video
+                                        ? <Link href={product.pdf} target="-blank" className="bg-gray-700 rounded-lg px-5 py-2">Downloads</Link>
+                                        : null
                             }
                         </div>
                         <Link href={`/`}>
