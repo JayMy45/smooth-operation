@@ -70,7 +70,7 @@ export default function ProductsPage() {
                                             <div className="h-fit">
                                                 <Link href={`/company`}>
                                                     <footer>
-                                                        <h3 className={`h-fit mt-2 md:mt-0 ml-4 md:ml-3 text-xs font-semibold ${robotoCondensed.className}`}>{company}</h3>
+                                                        <h3 className={`h-fit mt-2 md:mt-0 ml-4 md:ml-3 text-xs ${robotoCondensed.className}`}>{company}</h3>
                                                     </footer>
                                                 </Link>
                                             </div>
