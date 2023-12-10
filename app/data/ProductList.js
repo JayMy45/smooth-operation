@@ -22,7 +22,7 @@ export const ProductList = [
         video: "",
         pdf: "",
         description: `Apple Cider Vinegar has been used for centuries as a traditional remedy to help support digestion, gut health, and appetite. With Wellfinity Skinny Gummies for adults, you can enjoy apple cider vinegar without the unpleasant taste. This delicious vegan formula is also free of caffeine, stimulants, and added sugars.<br /><br />- Helps to support and maintain a healthy metabolism.*<br /><br />- Vitamin B12 supports healthy nutrient metabolism*<br /><br />Wellfinity’ sweet, soft and chewy vegan gummies are made with fruit pectin and premium ingredients for great taste and results! Gelatin free.`,
-        companyActive: true,
+        companyActive: false,
         productActive: false
     },
     {
@@ -35,7 +35,7 @@ export const ProductList = [
         video: "",
         pdf: "",
         description: `The keys to a healthy scalp include stimulating blood circulation which in turn stimulates hair follicles to do their job well. <br /><br />Our Scalp Stimulating Elixir delivers an intense infusion of vitamins and companyActive botanicals to nourish targeted areas and support healthy hair growth. Use daily to revitalize the delicate, weak and overworked areas of your hair.<br /><br />Like all Hairfinity Elite products, this powerful, science-backed formula is clean, green and cruelty-free, formulated without sulfates, silicones, parabens, phthalates, mineral oil or petroleum.`,
-        companyActive: true,
+        companyActive: false,
         productActive: false
     },
 
@@ -76,7 +76,7 @@ export const ProductList = [
         pdf: "/SkinCareSystem.pdf",
         description: `The RENU Advanced Skin Care System by ASEA is designed to rejuvenate and renew skin, harnessing the power of redox principles. It aims to maintain skin's natural redox balance, leading to healthier, more vibrant skin. The four-step regimen includes products like a foaming cleanser, balancing toner, glow serum, and hydrating cream. Key ingredients include beet root extract for hydration, Leontopodium alpinum extract for soothing, and other natural extracts for skin health. The system is free from harmful chemicals, gluten-free, fragrance-free, and cruelty-free. RENU28, an optional add-on, further enhances skin care by reducing cellulite and wrinkles.`,
         companyActive: true,
-        productActive: true
+        productActive: false
     },
     {
         id: 7,
