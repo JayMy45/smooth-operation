@@ -36,7 +36,7 @@ export default function NavBar() {
                     <div className="flex justify-center items-center w-3/12 ">
 
                         <div className="uppercase">
-                            <Link href="/">
+                            <Link href="/products">
 
                                 <Image
                                     src="/smoothlogo1.png"
@@ -87,7 +87,7 @@ export default function NavBar() {
                                     className="absolute w-full bg-white dark:bg-gray-800 dark:text-white text-gray-800 p-1 z-10 rounded-b-lg border-t"
                                 >
                                     <div className="text-left ml-3 w-full p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
-                                        <Link href={`/`}
+                                        <Link href={`/products`}
                                             onClick={handleToggle}
                                         >
                                             <h2 className="font-bold">All Products</h2>
