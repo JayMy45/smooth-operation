@@ -21,7 +21,7 @@ export default function Home() {
 
           <div className=''>
             <Image
-              src={'/SadePic.png'}
+              src={'/SadePicture.png'}
               alt='Sade Pic'
               width={500}
               height={500}
