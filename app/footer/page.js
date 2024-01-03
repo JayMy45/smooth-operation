@@ -27,15 +27,17 @@ export default function Footer() {
                 <div className="hidden md:block w-9/12 p-3">
                     <div className="flex flex-row justify-around">
                         {
-                            ProductList.map(({ id, name }) => (
-                                <div key={id} className="w-28 p-1hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
-                                    <div className="">
-                                        <Link href={`/products/${id}`}>
-                                            <h2 className="text-xs text-gray-100 text-center">{name}</h2>
-                                        </Link>
+                            ProductList.map(({ id, name, productActive }) => (
+                                productActive
+                                    ? <div key={id} className="w-28 p-1 hover:text-lg hover:text-indigo-800 dark:hover:text-gray-300 hover:font-bold">
+                                        <div className="">
+                                            <Link href={`/products/${id}`}>
+                                                <h2 className="text-xs text-gray-100 text-center">{name}</h2>
+                                            </Link>
 
+                                        </div>
                                     </div>
-                                </div>
+                                    : null
                             ))
                         }
                     </div>
