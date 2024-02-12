@@ -19,13 +19,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=''>
+          <div>
             <Image
               src={'/SadePicture.png'}
               alt='Sade Pic'
               width={500}
               height={500}
             />
+            <h3 className="text-center text-sm md:text-md">ASEA Associate, GOFINITY Consultant</h3>
           </div>
         </div>
         <div className='p-8 md:p-2'>
