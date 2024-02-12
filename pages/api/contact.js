@@ -22,10 +22,22 @@ export default async function ContactAPI(req, res) {
 
 
     // create transporter object using nodemailer and gmail credentials (see nodemailer docs for more info)
+    // const transporter = nodemailer.createTransport({
+    //     host: "smtp.gmail.com",
+    //     port: 465,
+    //     secure: true,
+    //     auth: {
+    //         user: user,
+    //         pass: process.env.pass,
+    //     },
+    // });
+
+
+    // create transporter object using nodemailer and microsoft credentials (see nodemailer docs for more info)
     const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
+        host: "smtp.office365.com",
+        port: 587,
+        secure: false,
         auth: {
             user: user,
             pass: process.env.pass,
@@ -45,7 +57,7 @@ export default async function ContactAPI(req, res) {
 
         const mail = await transporter.sendMail({
             from: user,
-            to: "jnmyers774@gmail.com",
+            to: "esnh0587@smoothops.shop",
             replyTo: email,
             subject: `Contact ASEA/GOFINITY for ${name}`,
             html: `
