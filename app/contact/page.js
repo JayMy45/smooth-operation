@@ -161,26 +161,28 @@ export default function Contact() {
                             </div>
                             <section className="mx-auto ">
                                 <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                                    {ProductList.map(({ id, name }) => (
-                                        <div key={id} className="">
-                                            <input
-                                                onChange={(e) => {
-                                                    const copy = new Set(checkedOptions);
-                                                    if (copy.has(id)) {
-                                                        copy.delete(id);
-                                                    } else {
-                                                        copy.add(id);
-                                                    }
-                                                    setCheckedOptions(copy);
-                                                }}
-                                                type="checkbox"
-                                                id={id}
-                                                name={name}
-                                                value={id}
-                                                checked={checkedOptions.has(id)} // Dynamically set the checked state based on whether id is in checkedOptions set
-                                            />
-                                            <label htmlFor={id} className="text-xs ml-1 capitalize" >{name}</label>
-                                        </div>
+                                    {ProductList.map(({ id, name, productActive }) => (
+                                        productActive
+                                            ? <div key={id} className="">
+                                                <input
+                                                    onChange={(e) => {
+                                                        const copy = new Set(checkedOptions);
+                                                        if (copy.has(id)) {
+                                                            copy.delete(id);
+                                                        } else {
+                                                            copy.add(id);
+                                                        }
+                                                        setCheckedOptions(copy);
+                                                    }}
+                                                    type="checkbox"
+                                                    id={id}
+                                                    name={name}
+                                                    value={id}
+                                                    checked={checkedOptions.has(id)} // Dynamically set the checked state based on whether id is in checkedOptions set
+                                                />
+                                                <label htmlFor={id} className="text-xs ml-1 capitalize" >{name}</label>
+                                            </div>
+                                            : null
 
                                     ))}
                                 </div>
