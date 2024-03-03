@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useEffect } from 'react';
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import { ProductList } from '../data/ProductList';
@@ -56,6 +55,7 @@ export default function Contact() {
 
             // reset form
             event.target.reset();
+            setPhoneNumber(''); // Reset the phone number state to empty
             setCheckedOptions(new Set());
 
             // After successful submission and form reset
@@ -159,8 +159,8 @@ export default function Contact() {
                             <div className="mx-auto hidden md:block">
                                 <h2 className='italic text-sm'>Select the product(s) that interest you...</h2>
                             </div>
-                            <section className="mx-auto ">
-                                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                            <section className="mx-auto">
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                     {ProductList.map(({ id, name, productActive }) => (
                                         productActive
                                             ? <div key={id} className="">
@@ -187,7 +187,7 @@ export default function Contact() {
                                     ))}
                                 </div>
                             </section>
-                            <div className="flex justify-center mb-7 md:mb-0 md:mt-7">
+                            <div className="flex justify-center mb-7 md:mb-0 mt-4 md:mt-3">
                                 <button
                                     disabled={loading}
                                     className={loading ? "bg-green-700 dark:bg-green-800 bg-opacity-40 dark:bg-opacity-30 rounded-lg py-2 px-7 shadow-2xl w-fit" : "bg-slate-700 dark:bg-slate-500 rounded-lg py-2 px-7 shadow-2xl w-fit"}>
@@ -200,6 +200,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </form>
+
             </section >
             {/* toast container */}
             <div className='z-11'>
