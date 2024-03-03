@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect } from 'react';
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import { ProductList } from '../data/ProductList';
+import { TailSpin } from 'react-loader-spinner';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -13,6 +13,10 @@ export default function Contact() {
 
     // loading state for submit button
     const [loading, setLoading] = useState(false);
+
+    // success state to display successful button
+    const [isSuccess, setIsSuccess] = useState(false);
+
 
     // checkbox state to track which products are selected
     const [checkedOptions, setCheckedOptions] = useState(new Set())
@@ -34,42 +38,46 @@ export default function Contact() {
     async function handleSubmit(event) {
         event.preventDefault();
         setLoading(true);
+        setIsSuccess(false);
 
-        const data = {
-            name: event.target.name.value,
-            email: event.target.email.value,
-            phone: event.target.phone.value,
-            message: event.target.message.value,
-            products: Array.from(checkedOptions),
-        };
+        try {
+            const data = {
+                name: event.target.name.value,
+                email: event.target.email.value,
+                phone: event.target.phone.value,
+                message: event.target.message.value,
+                products: Array.from(checkedOptions),
+            };
 
-        console.log(data);
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-        if (response.ok) {
-            console.log('response worked');
+            console.log(data);
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+            if (response.ok) {
+                console.log('response worked');
 
-            // reset form
-            event.target.reset();
-            setCheckedOptions(new Set());
+                // reset form
+                event.target.reset();
+                setPhoneNumber(''); // Reset the phone number state to empty
+                setCheckedOptions(new Set());
+                setResetCount(prevCount => prevCount + 1); // After successful submission and form reset
+                setIsSuccess(true); // Indicate that the email was sent successfully
+                notifySuccess();// display toast message when email is sent successfully
 
-            // After successful submission and form reset
-            setResetCount(prevCount => prevCount + 1);
+            } else {
+                console.log('Error sending message');
+                notifyError();// display toast message when email fails to send
+            }
 
-            // display toast message when email is sent successfully
-            notifySuccess();
-        }
-        if (!response.ok) {
-            setLoading(false);
-            console.log('Error sending message');
-
-            // display toast message when email fails to send
-            notifyError();
+        } catch (error) {
+            console.error('Submission error:', error);
+            notifyError(); // Show error message
+        } finally {
+            setLoading(false); // Stop loading regardless of success or failure
         }
     };
 
@@ -159,46 +167,60 @@ export default function Contact() {
                             <div className="mx-auto hidden md:block">
                                 <h2 className='italic text-sm'>Select the product(s) that interest you...</h2>
                             </div>
-                            <section className="mx-auto ">
-                                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                                    {ProductList.map(({ id, name }) => (
-                                        <div key={id} className="">
-                                            <input
-                                                onChange={(e) => {
-                                                    const copy = new Set(checkedOptions);
-                                                    if (copy.has(id)) {
-                                                        copy.delete(id);
-                                                    } else {
-                                                        copy.add(id);
-                                                    }
-                                                    setCheckedOptions(copy);
-                                                }}
-                                                type="checkbox"
-                                                id={id}
-                                                name={name}
-                                                value={id}
-                                                checked={checkedOptions.has(id)} // Dynamically set the checked state based on whether id is in checkedOptions set
-                                            />
-                                            <label htmlFor={id} className="text-xs ml-1 capitalize" >{name}</label>
-                                        </div>
+                            <section className="mx-auto">
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                    {ProductList.map(({ id, name, productActive }) => (
+                                        productActive
+                                            ? <div key={id} className="">
+                                                <input
+                                                    onChange={(e) => {
+                                                        const copy = new Set(checkedOptions);
+                                                        if (copy.has(id)) {
+                                                            copy.delete(id);
+                                                        } else {
+                                                            copy.add(id);
+                                                        }
+                                                        setCheckedOptions(copy);
+                                                    }}
+                                                    type="checkbox"
+                                                    id={id}
+                                                    name={name}
+                                                    value={id}
+                                                    checked={checkedOptions.has(id)} // Dynamically set the checked state based on whether id is in checkedOptions set
+                                                />
+                                                <label htmlFor={id} className="text-xs ml-1 capitalize" >{name}</label>
+                                            </div>
+                                            : null
 
                                     ))}
                                 </div>
                             </section>
-                            <div className="flex justify-center mb-7 md:mb-0 md:mt-7">
-                                <button
-                                    disabled={loading}
-                                    className={loading ? "bg-green-700 dark:bg-green-800 bg-opacity-40 dark:bg-opacity-30 rounded-lg py-2 px-7 shadow-2xl w-fit" : "bg-slate-700 dark:bg-slate-500 rounded-lg py-2 px-7 shadow-2xl w-fit"}>
-                                    {loading
-                                        ? <h2 className="uppercase text-yellow-300 text-xl font-bold">Success!!!</h2>
-                                        : <h2 className="uppercase text-slate-100 text-lg font-bold">Submit</h2>
-                                    }
-                                </button>
+                            <div className="flex justify-center mb-7 md:mb-0 mt-4 md:mt-3">
+                                {!loading && !isSuccess && (
+                                    <button type="submit" className="bg-slate-700 dark:bg-slate-500 rounded-lg py-2 px-7 shadow-2xl w-fit">
+                                        Submit
+                                    </button>
+                                )}
+
+                                {loading && (
+                                    <div className="flex justify-center items-center">
+                                        <h1 className="text-5xl">Sending Email...</h1>
+                                        <TailSpin color="#00BFFF" height={80} width={80} />
+                                    </div>
+                                )}
+
+                                {!loading && isSuccess && (
+                                    <div className="text-green-500 text-center">
+                                        Email sent successfully!
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
+
                 </form>
             </section >
+
             {/* toast container */}
             <div className='z-11'>
                 <ToastContainer
