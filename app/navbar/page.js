@@ -111,6 +111,12 @@ export default function NavBar() {
                             )}
                         </div>
 
+                        <div className="hover:border-b">
+                            <Link href="/about">
+                                <h2 className="uppercase">about me</h2>
+                            </Link>
+                        </div>
+
 
                     </div>
                     <div className="flex justify-center items-center w-3/12">
