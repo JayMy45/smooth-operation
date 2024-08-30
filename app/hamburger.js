@@ -162,6 +162,13 @@ export default function Hamburger() {
                                 </div>
 
                             )}
+                            <Link href="/about">
+                                <li
+                                    onClick={() => setNavbarOpen(false)}
+                                    className="py-4 text-slate-100 cursor-pointer">
+                                    <h2 className="uppercase">about me</h2>
+                                </li>
+                            </Link>
                         </div>
 
                     </ul>
